@@ -352,14 +352,6 @@ window.addEventListener("resize", initProductSlider);
 
 ////////// Search result box  start ////////
 
-// header 
- const toggleBtn = document.getElementById('toggleSearch');
-  const searchBar = document.getElementById('mobileSearchBar');
-
-  toggleBtn.addEventListener('click', () => {
-    searchBar.classList.toggle('d-none');
-  });
-
   
 const suggestions = [
   {
@@ -486,3 +478,34 @@ mobileInput.addEventListener("input", () => {
 });
 
 ////////// Search result box  end ////////
+
+
+// header 
+ const toggleBtn = document.getElementById('toggleSearch');
+  const searchBar = document.getElementById('mobileSearchBar');
+
+  toggleBtn.addEventListener('click', () => {
+    searchBar.classList.toggle('d-none');
+  });
+
+
+
+
+let lastScrollTop = 0;
+const headerContainer = document.querySelector('.header-container');
+
+window.addEventListener("scroll", function () {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if (currentScroll > lastScrollTop) {
+    // downscroll
+    headerContainer.classList.add("hide-on-scroll");
+  } else {
+    // upscroll
+    headerContainer.classList.remove("hide-on-scroll");
+  }
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+}, false);
+
+
+

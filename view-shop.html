@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Iriszon-products-details</title>
+  <title>Iriszon-View Shop</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Animation Effects CDN  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Animation Effects CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
@@ -20,9 +20,11 @@
 
 <body>
 
-  <header>
+   <!-- ====== header section start ====== -->
+
+      <header>
     <!--======Start Web Header ====== -->
-    <div class="shadow-lg sticky-top bg-white d-none d-lg-block">
+    <div class="shadow-lg fixed-top bg-white d-none d-lg-block" style="z-index: 1050;">
       <div class="container-fluid px-0">
         <div class="web-header">
           <div class="container-fluid">
@@ -41,6 +43,14 @@
                   </span>
                 </div>
               </div>
+
+              <div class="product-suggestion-box d-none" id="searchSuggestions">
+                <p>Showing results for '<span id="searchKeyword" class="text-success"></span>'</p>
+                <table id="suggestionTable">
+                  <!-- JS will insert rows here -->
+                </table>
+              </div>
+
 
               <!-- Supplier Button -->
               <div>
@@ -97,6 +107,8 @@
             <a href="#" class="nav-link" data-dropdown="jewellery">Jewellery & Accessories</a>
             <a href="#" class="nav-link" data-dropdown="bags">Bags & Footwear</a>
             <a href="#" class="nav-link" data-dropdown="electronics">Electronics</a>
+            <a href="#" class="nav-link" data-dropdown="electronics">Sports & Fitness</a>
+            <a href="#" class="nav-link" data-dropdown="electronics">Car & Motorbike</a>
           </nav>
 
           <!-- Dropdown Example -->
@@ -161,6 +173,88 @@
                 <a href="#" class="dropdown-item">Islamic Fashion</a>
                 <a href="#" class="dropdown-item">Petticoats</a>
               </div>
+              <div class="dropdown-column">
+                <div class="column-title">Suits & Dress Material</div>
+                <a href="#" class="dropdown-item">All Suits & Dress Material</a>
+                <a href="#" class="dropdown-item">Cotton Suits</a>
+                <a href="#" class="dropdown-item">Embroidered Suits</a>
+                <a href="#" class="dropdown-item">Crepe Suits</a>
+                <a href="#" class="dropdown-item">Silk Suits</a>
+                <a href="#" class="dropdown-item">Patiala Suits</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown-container" id="women-ethnic-dropdown">
+            <div class="dropdown-content">
+              <div class="dropdown-column">
+                <div class="column-title">Sarees</div>
+                <a href="#" class="dropdown-item">All Sarees</a>
+                <a href="#" class="dropdown-item">Silk Sarees</a>
+                <a href="#" class="dropdown-item">Banarasi Silk Sarees</a>
+                <a href="#" class="dropdown-item">Cotton Sarees</a>
+                <a href="#" class="dropdown-item">Georgette Sarees</a>
+                <a href="#" class="dropdown-item">Chiffon Sarees</a>
+                <a href="#" class="dropdown-item">Heavy Work Sarees</a>
+                <a href="#" class="dropdown-item">Net Sarees</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Kurtis</div>
+                <a href="#" class="dropdown-item">All Kurtis</a>
+                <a href="#" class="dropdown-item">Anarkali Kurtis</a>
+                <a href="#" class="dropdown-item">Rayon Kurtis</a>
+                <a href="#" class="dropdown-item">Cotton Kurtis</a>
+                <a href="#" class="dropdown-item">Chikankari Kurtis</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Kurta Sets</div>
+                <a href="#" class="dropdown-item">All Kurta Sets</a>
+                <a href="#" class="dropdown-item">Kurta Palazzo Sets</a>
+                <a href="#" class="dropdown-item">Rayon Kurta Sets</a>
+                <a href="#" class="dropdown-item">Kurta Pant Sets</a>
+                <a href="#" class="dropdown-item">Cotton Kurta Sets</a>
+                <a href="#" class="dropdown-item">Sharara Sets</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Dupatta Sets</div>
+                <a href="#" class="dropdown-item">Cotton Sets</a>
+                <a href="#" class="dropdown-item">Rayon Sets</a>
+                <a href="#" class="dropdown-item">Printed Sets</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Suits & Dress Material</div>
+                <a href="#" class="dropdown-item">All Suits & Dress Material</a>
+                <a href="#" class="dropdown-item">Cotton Suits</a>
+                <a href="#" class="dropdown-item">Embroidered Suits</a>
+                <a href="#" class="dropdown-item">Crepe Suits</a>
+                <a href="#" class="dropdown-item">Silk Suits</a>
+                <a href="#" class="dropdown-item">Patiala Suits</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Lehengas</div>
+                <a href="#" class="dropdown-item">Lehenga Cholis</a>
+                <a href="#" class="dropdown-item">Net Lehenga</a>
+                <a href="#" class="dropdown-item">Bridal Lehenga</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Other Ethnic</div>
+                <a href="#" class="dropdown-item">Blouses</a>
+                <a href="#" class="dropdown-item">Dupattas</a>
+                <a href="#" class="dropdown-item">Lehanga</a>
+                <a href="#" class="dropdown-item">Gown</a>
+                <a href="#" class="dropdown-item">Skirts & Bottomwear</a>
+                <a href="#" class="dropdown-item">Islamic Fashion</a>
+                <a href="#" class="dropdown-item">Petticoats</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Suits & Dress Material</div>
+                <a href="#" class="dropdown-item">All Suits & Dress Material</a>
+                <a href="#" class="dropdown-item">Cotton Suits</a>
+                <a href="#" class="dropdown-item">Embroidered Suits</a>
+                <a href="#" class="dropdown-item">Crepe Suits</a>
+                <a href="#" class="dropdown-item">Silk Suits</a>
+                <a href="#" class="dropdown-item">Patiala Suits</a>
+              </div>
             </div>
           </div>
         </div>
@@ -169,14 +263,17 @@
     <!--======End Web Header ====== -->
 
     <!--======Start Mobile Header ====== -->
-    <div class="container-fluid d-lg-none d-block py-2 shadow-lg sticky-top bg-white">
+    <div class="mobile-header container-fluid d-lg-none py-2 shadow-lg fixed-top bg-white">
       <div class="row align-items-center px-2">
+        <!-- Logo -->
         <div class="col-6 text-start">
-          <img class="responsive_logo" src="assets/irizonfinal[1].png" alt="mobile_logo" style="height: 60px;" />
+          <img class="responsive_logo" src="assets/irizonfinal[1].png" alt="mobile_logo" style="height: 55px;" />
         </div>
+
+        <!-- Search Icon -->
         <div class="col-6 text-end">
-          <svg id="toggleSearch" class="mobile_search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
-            height="24" fill="none" style="cursor: pointer;">
+          <svg id="toggleSearch" class="mobile_search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28"
+            height="28" fill="none" style="cursor: pointer;">
             <path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round" />
             <path d="M20 11C20 6.03 15.97 2 11 2S2 6.03 2 11s4.03 9 9 9 9-4.03 9-9Z" stroke="currentColor"
@@ -185,11 +282,11 @@
         </div>
       </div>
 
-      <!-- Toggle-able Search Bar -->
+      <!-- Search Bar Toggle -->
       <div id="mobileSearchBar" class="row px-3 mt-2 d-none">
         <div class="col-12">
           <div class="position-relative">
-            <input class="form-control py-2 ps-3 pe-5 rounded-pill border" type="text" placeholder="Search"
+            <input class="form-control py-2 ps-3 pe-5 rounded-pill border" type="text" placeholder="Search products..."
               id="mobile-search" />
             <span class="position-absolute top-50 translate-middle-y" style="right: 15px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
@@ -200,7 +297,16 @@
           </div>
         </div>
       </div>
+
+      <!-- Suggestion Box -->
+      <div class="product-suggestion-box d-none mt-2" id="mobileSearchSuggestions">
+        <p class="px-3">Showing results for: '<span id="mobileSearchKeyword" class="text-success"></span>'</p>
+        <table class="table table-sm table-borderless" id="mobileSuggestionTable">
+          <!-- JS will insert rows -->
+        </table>
+      </div>
     </div>
+
     <!--======End Mobile Header ====== -->
 
     <!-- ======Start Bottom Bar====== -->
@@ -321,245 +427,114 @@
     <!-- ======End Sign up Modal====== -->
   </header>
 
+   <!-- ====== header section end ====== -->
 
 
 
-  <!-- ======== products details section start ======== -->
+<div class="shop-header">
+  <!-- Cover Image -->
+  <img src="assets/hero-bg.jpg" alt="Shop Cover" class="shop-cover"/>
 
-
-  <section class="products_details">
-    <div class="product-container">
-      <div class="product-top-section">
-        <div class="image-gallery">
-          <div class="product-thumbnails">
-            <img src="assets/bax2.webp" class="thumb active" onclick="changeImage(this)">
-            <img src="assets/4.png" class="thumb" onclick="changeImage(this)">
-            <img src="assets/product-19.jpg" class="thumb" onclick="changeImage(this)">
-            <img src="assets/4.png" class="thumb" onclick="changeImage(this)">
-          </div>
-          <div class="main-image">
-            <img id="mainProductImage" src="assets/bax2.webp" alt="Main Product">
-            <div class="action-buttons">
-              <button class="add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
-              <button class="buy-now"><i class="fa fa-bolt"></i> Buy Now</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-box">
-          <div class="product-info-box">
-            <div class="product-title">Diamond work Traditional Fancy Saree</div>
-            <div class="price">₹404</div>
-            <div class="rating-section">
-              <span class="star">4.0 <i class="fa fa-star"></i></span>
-              <span>9010 Ratings, 2131 Reviews</span>
-            </div>
-            <div class="delivery">Free Delivery</div>
-          </div>
-
-          <div class="select-size">
-            <strong>Select Size</strong><br>
-            <button>Free Size</button>
-          </div>
-
-          <div class="product-details">
-            <strong>Product Details:</strong>
-            <ul>
-              <li><strong>Name:</strong> Diamond work Traditional Fancy Saree</li>
-              <li><strong>Fabric:</strong> Net</li>
-              <li><strong>Saree Fabric:</strong> Net</li>
-              <li><strong>Blouse:</strong> Separate Blouse Piece</li>
-              <li><strong>Blouse Fabric:</strong> Net</li>
-              <li><strong>Pattern:</strong> Embroidered</li>
-              <li><strong>Blouse Pattern:</strong> Embroidered</li>
-              <li><strong>Multipack:</strong> Single</li>
-              <li><strong>Saree Length:</strong> 5.5m, Blouse Length: 0.8m</li>
-              <li><strong>Country of Origin:</strong> India</li>
-            </ul>
-          </div>
-
-          <!-- Seller Info Section -->
-          <div class="seller-box">
-            <div class="seller-info">
-              <img src="assets/icons/return.png" alt="Shop Icon" class="shop-icon">
-              <div class="seller-details">
-                <strong class="shop-name">Paawni Industries</strong>
-              </div>
-            </div>
-            <a href="shop.html" class="view-shop-btn">View Shop</a>
-          </div>
-
-        </div>
-      </div>
+  <!-- Info Section -->
+  <div class="container shop-info">
+    <!-- Logo -->
+    <div class="shop-logo">
+      🏬
     </div>
-  </section>
 
-
-  <section class="products_cards">
-    <div class="container">
-      <h2>People also viewed</h2>
-      <div class="card-container">
-
-        <div class="card">
-          <img src="assets/bax2.webp" alt="Banita Saree">
-          <div class="card-body">
-            <div class="card-title">Banita Petite Sarees</div>
-            <div class="price-rating">
-              <div class="card-price">₹414</div>
-              <div class="rating"><span>3.7 ★</span>16 Reviews</div>
-            </div>
-            <div class="free-delivery">Free Delivery</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="assets/bax2.webp" alt="Adrika Saree">
-          <div class="card-body">
-            <div class="card-title">Adrika Ensemble Sarees</div>
-            <div class="price-rating">
-              <div class="card-price">₹403</div>
-              <div class="rating"><span>3.9 ★</span>Supplier</div>
-            </div>
-            <div class="free-delivery">Free Delivery</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="assets/bax2.webp" alt="Myra Saree">
-          <div class="card-body">
-            <div class="card-title">Myra Ensemble Sarees</div>
-            <div class="price-rating">
-              <div class="card-price">₹474</div>
-              <div class="rating"><span>3.9 ★</span>96 Reviews</div>
-            </div>
-            <div class="free-delivery">Free Delivery</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="assets/bax2.webp" alt="Alisha Saree">
-          <div class="card-body">
-            <div class="card-title">Alisha Graceful Sarees</div>
-            <div class="price-rating">
-              <div class="card-price">₹480</div>
-              <div class="rating"><span>5.0 ★</span>10 Reviews</div>
-            </div>
-            <div class="free-delivery">Free Delivery</div>
-          </div>
-        </div>
-
-      </div>
+    <!-- Name -->
+    <div class="shop-name">
+      Paawni Industries
     </div>
-  </section>
+
+    <!-- Follow Button -->
+    <div class="shop-actions">
+      <button class="btn btn-primary">Follow</button>
+    </div>
+  </div>
+</div>
 
 
-  <!-- ======== products details section end ======== -->
+  
 
-
-
-
-
-
-  <!-- ===Footer-Section-Start=== -->
-  <footer class="footer-section">
+     <!-- ===Footer-Section-Start=== -->
+ 
+       <footer class="footer-section">
     <div class="container">
       <div class="row">
+        <!-- Column 1 -->
         <div class="col-lg-4 col-md-7">
           <div class="f-box">
             <div class="f-logo">
               <img src="assets/irizonfinal[1].png" alt="Iriszon" />
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, perspiciatis dolore
-              numquam sed sit
-              doloremque veritatis ratione ex minus illum. </p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, perspiciatis dolore numquam sed sit
+              doloremque veritatis ratione ex minus illum.
+            </p>
             <ul class="social-link">
-              <li>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-              </li>
+              <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
             </ul>
           </div>
         </div>
+
+        <!-- Column 2 -->
         <div class="col-lg-3 col-md-5">
           <div class="f-box">
             <h4>Quick Links</h4>
             <ul>
-              <li>
-                <a href="index.html"><span>Home</span></a>
-              </li>
-              <li>
-                <a href="#about"><span>About</span></a>
-              </li>
-
-              </li>
-              <li>
-                <a href="pliocy.html"><span>Privacy Policy</span></a>
-              </li>
-              <li>
-                <a href="terms.html"><span>Terms & Conditions</span></a>
-              </li>
+              <li><a href="index.html"><span>Home</span></a></li>
+              <li><a href="#about"><span>About</span></a></li>
+              <li><a href="pliocy.html"><span>Privacy Policy</span></a></li>
+              <li><a href="terms.html"><span>Terms & Conditions</span></a></li>
             </ul>
           </div>
         </div>
+
+        <!-- Column 3 -->
         <div class="col-lg-5">
           <div class="f-box">
             <h4>Contact Info</h4>
             <ul>
-              <li>
-                <i class="fa-solid fa-location-dot"></i>
-                Lorem ipsum dolor sit amet consectetur
-              </li>
-
-              <li>
-                <i class="fa-solid fa-phone"></i><a href="tel:+91 123456789">+91 1234567689</a>
-              </li>
-
-              <li>
-                <i class="fa-solid fa-envelope"></i><a href="mailto:@gmail.com">@gmail.com</a>
-              </li>
+              <li><i class="fa-solid fa-location-dot"></i> Lorem ipsum dolor sit amet consectetur</li>
+              <li><i class="fa-solid fa-phone"></i><a href="tel:+91 123456789">+91 1234567689</a></li>
+              <li><i class="fa-solid fa-envelope"></i><a href="mailto:@gmail.com">@gmail.com</a></li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="copy-right">
-          <p>
-            © Copyright 2025 | Powered by IRISZON. and
-            Designed By
-            <a href="#">#</a>
-          </p>
-        </div>
-      </div>
+    </div>
+
+    <!-- CopyRight Section Moved Outside -->
+    <div class="copy-right">
+      <p>
+        © Copyright 2025 | Powered by IRISZON. and
+        Designed By <a href="#">#</a>
+      </p>
     </div>
   </footer>
-  <div class="d-block d-lg-none"></div>
+  
   <!-- ===Footer-Section-End=== -->
 
 
 
 
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- Animation Effects CDN  -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
-  <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Animation Effects CDN  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  
+    <script src="script.js"></script>
 </body>
