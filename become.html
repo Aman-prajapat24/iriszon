@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iriszon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Animation Effects CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- seller banner section start  -->
+     <section class="seller_banner">
+        <div class="container">
+            <div class="content">
+                <h1>Sell online to 14 Cr+ customers at <br> <span>0% Commission</span></h1>
+                <p>Become a Meesho seller and grow your business across India</p>
+                <div class="new-feature">
+                    <span>NEW</span> Don't have a GSTIN? You can still sell on Meesho. <a href="#">Know more</a>
+                </div>
+                <button class="start-selling">Start Selling</button>
+            </div>
+        </div>
+     </section>
+    <!-- seller banner section end  -->
+
+    <!-- why suppliers section start  -->
+    <section class="why_supplier">
+        <div class="container">
+            <div class="left-content">
+                <h1>Why Suppliers Love Meesho</h1>
+                <p>All the benefits that come with selling on Meesho are designed to help you sell more, and make it
+                    easier to grow your business.</p>
+            </div>
+
+            <div class="right-content">
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="icon">
+                            <svg viewBox="0 0 24 24" fill="#90201f">
+                                <path
+                                    d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M11,17H13V11H11V17Z" />
+                                <path d="M12,7A1,1 0 0,0 11,8A1,1 0 0,0 12,9A1,1 0 0,0 13,8A1,1 0 0,0 12,7Z" />
+                            </svg>
+                        </div>
+                        <div class="feature-title"><span class="highlight">0% Commission Fee</span></div>
+                        <div class="plus-icon"></div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Suppliers selling on Meesho keep 100% of their profit by not paying any commission.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="icon">
+                            <svg viewBox="0 0 24 24" fill="#90201f">
+                                <path
+                                    d="M14,17H12V9H10V7H14M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z" />
+                            </svg>
+                        </div>
+                        <div class="feature-title"><span class="highlight">0 Penalty Charges</span></div>
+                        <div class="plus-icon"></div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Sell online without the fear of order cancellation charges with <span class="highlight">0
+                                Penalty</span> for late dispatch or order cancellations.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="icon">
+                            <svg viewBox="0 0 24 24" fill="#90201f">
+                                <path
+                                    d="M23,8C21.19,8 19.5,7.25 18.23,6L15,2.4L14,4.46L16.23,7.89C16.1,8.23 16,8.61 16,9A5,5 0 0,0 21,14C22.1,14 23,13.1 23,12V9.68C23.04,8.92 23.18,8.44 23.65,8.04C23.44,8.04 23.24,8 23,8M10,2C8.89,2 8,2.89 8,4A2,2 0 0,0 10,6A2,2 0 0,0 12,4C12,2.89 11.1,2 10,2M13.75,7L13,8L14,12L11,11L9,22H15L19,13.08C17.84,14.14 16.22,14.5 14.53,14.27L13.75,7Z" />
+                            </svg>
+                        </div>
+                        <div class="feature-title">Growth for Every Supplier</div>
+                        <div class="plus-icon"></div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>From small to large and unbranded to branded, and now open for Sellers who don't have a
+                            Regular GSTIN too, Meesho fuels growth for all suppliers.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="icon">
+                            <svg viewBox="0 0 24 24" fill="#90201f">
+                                <path
+                                    d="M19,12H17V15H14V17H19M7,9H9V5H12V3H7M21,3H13V9H21V3M21,19H13V21H21V19M21,11H11V21H21V11M3,21H9V11H3V21M3,3V9H9V3H3Z" />
+                            </svg>
+                        </div>
+                        <div class="feature-title">Ease of Doing Business</div>
+                        <div class="plus-icon"></div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="check-item">
+                            <span class="check-icon">✓</span>
+                            <span>Easy Product Listing</span>
+                        </div>
+                        <div class="check-item">
+                            <span class="check-icon">✓</span>
+                            <span>Lowest Cost Shipping</span>
+                        </div>
+                        <div class="check-item">
+                            <span class="check-icon">✓</span>
+                            <span>7-Day Payment Cycle from the delivery date</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- why suppliers section end  -->
+
+    <!-- How it works section start  -->
+    <section class="how_works">
+        <div class="container">
+            <h1>How it works</h1>
+    
+            <div class="steps-container">
+                <div class="steps">
+                    <div class="connector"></div>
+    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">Create Account</div>
+                            <div class="step-description">
+                                All you need is :
+                                <ul>
+                                    <li>GSTIN (for GST sellers) or Enrolment ID / UIN (for non-GST sellers)</li>
+                                    <li>Bank Account</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">List Products</div>
+                            <div class="step-description">
+                                List the products you want to sell in your supplier panel
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">Get Orders</div>
+                            <div class="step-description">
+                                Start getting orders from crores of Indians actively shopping on our platform.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-title">Lowest Cost Shipping</div>
+                            <div class="step-description">
+                                Products are shipped to customers at lowest costs
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <div class="step-title">Receive Payments</div>
+                            <div class="step-description">
+                                Payments are deposited directly to your bank account following a 7-day payment cycle from
+                                order delivery.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- How it works section end  -->
+
+    <!-- support section start  -->
+    <div class="support-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h2 class="support-title">Meesho Supplier Support Available 24/7</h2>
+                </div>
+                <div class="col-lg-7">
+                    <p class="support-description">
+                        Meesho supplier support is available to solve all your doubts and issues before and after you
+                        start your online selling business.
+                    </p>
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="mb-0">You can reach out to</p>
+                            <a href="mailto:sell@meesho.com" class="email-link">sell@meesho.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- support section end  -->
+
+
+    
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Animation Effects CDN  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init(); 
+    </script>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

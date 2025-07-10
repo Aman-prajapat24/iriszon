@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iriszon products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Animation Effects CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!--======Start Web Header ====== -->
+  <div class="container p-2 d-none d-lg-block shadow-lg sticky-top bg-white">
+    <div class="row align-items-center">
+      <div class="col-3 col-md-3">
+        <div class="logo text-center mb-3 mb-md-0">
+          <img src="assets/irizonfinal[1].png" alt="logo" class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-3 col-md-3">
+        <div class="text-center mb-3 mb-md-0">
+          <div class="header_input-container mt-4 position-relative">
+            <input class="input-simple searchInput" type="text" placeholder="Search" id="web-search" />
+            <span class="search-icon position-absolute" style="right: 10px; top: 50%; transform: translateY(-50%)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                <path fill="#838D99"
+                  d="M13.22 14.63a8 8 0 1 1 1.41-1.41l4.29 4.29a1 1 0 1 1-1.41 1.41l-4.29-4.29zm-.66-2.07a6 6 0 1 0-8.49-8.49 6 6 0 0 0 8.49 8.49z">
+                </path>
+              </svg>
+            </span>
+
+            <!-- Desktop Search Results -->
+            <!-- <div class="search-section position-absolute w-100 bg-white shadow-sm rounded" id="web-results" style="display: none; z-index: 10;">
+              <div class="alert alert-light m-2">
+                <strong>Showing results for '<span class="text-success" id="web-query">mamrw</span>'</strong>
+              </div>
+              <div class="list-group">
+                <div class="list-group-item">
+                  <div class="row align-items-center">
+                    <div class="col-lg-4">
+                      <div class="d-flex align-items-center">
+                        <img src="assets/product-17-1.jpg" alt="Product" class="rounded me-3" width="60" />
+                        <div>
+                          <h6 class="mb-1">Grocery Farm</h6>
+                          <p class="text-muted small">Mamra Almonds - 200 g</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="d-flex justify-content-between">
+                        <p class="mb-1 fw-bold">₹629.3</p>
+                        <p class="mb-1 fw-bold text-success">30% OFF</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="d-flex align-items-center justify-content-end">
+                        <input type="number" class="form-control form-control-sm w-50 me-2" value="1" min="1" />
+                        <button class="btn btn-outline-danger btn-sm">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-group-item">
+                  <div class="row align-items-center">
+                    <div class="col-lg-4">
+                      <div class="d-flex align-items-center">
+                        <img src="assets/product-17-1.jpg" alt="Product" class="rounded me-3" width="60" />
+                        <div>
+                          <h6 class="mb-1">Grocery Farm</h6>
+                          <p class="text-muted small">Mamra Almonds - 200 g</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="d-flex justify-content-between">
+                        <p class="mb-1 fw-bold">₹629.3</p>
+                        <p class="mb-1 fw-bold text-success">30% OFF</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="d-flex align-items-center justify-content-end">
+                        <input type="number" class="form-control form-control-sm w-50 me-2" value="1" min="1" />
+                        <button class="btn btn-outline-danger btn-sm">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="text-center mt-3">
+                  <a href="#" class="btn btn-link text-danger fw-bold">View all search results</a>
+                </div>
+              </div>
+            </div> -->
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-6 header_icons">
+        <div class="d-flex align-items-center justify-content-center justify-content-md-cenetr text-center">
+          <button href="become.html" class="seller_button me-4">Become a Supplier</button>
+          <div class="me-4">
+            <div>
+              <div class="dropdown">
+                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                    <path
+                      d="M6.57757 15.4816C5.1628 16.324 1.45336 18.0441 3.71266 20.1966C4.81631 21.248 6.04549 22 7.59087 22H16.4091C17.9545 22 19.1837 21.248 20.2873 20.1966C22.5466 18.0441 18.8372 16.324 17.4224 15.4816C14.1048 13.5061 9.89519 13.5061 6.57757 15.4816Z"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M16.5 6.5C16.5 8.98528 14.4853 11 12 11C9.51472 11 7.5 8.98528 7.5 6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5Z"
+                      stroke="currentColor" stroke-width="1.5" />
+                  </svg>
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#" id="openLogin">Login</a></li>
+                  <li><a class="dropdown-item" href="#" id="openSignup">Signup</a></li>
+                </ul>
+              </div>
+            </div>
+            <p>User</p>
+          </div>
+          <div class="me-4">
+            <div class="wishlist_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                <path
+                  d="M19.4626 3.99415C16.7809 2.34923 14.4404 3.01211 13.0344 4.06801C12.4578 4.50096 12.1696 4.71743 12 4.71743C11.8304 4.71743 11.5422 4.50096 10.9656 4.06801C9.55962 3.01211 7.21909 2.34923 4.53744 3.99415C1.01807 6.15294 0.221721 13.2749 8.33953 19.2834C9.88572 20.4278 10.6588 21 12 21C13.3412 21 14.1143 20.4278 15.6605 19.2834C23.7783 13.2749 22.9819 6.15294 19.4626 3.99415Z"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <div class="count">1</div>
+            </div>
+            <p>Wishlist</p>
+          </div>
+          <div class="">
+            <div class="bag_icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                <path
+                  d="M3.06164 14.4413L3.42688 12.2985C3.85856 9.76583 4.0744 8.49951 4.92914 7.74975C5.78389 7 7.01171 7 9.46734 7H14.5327C16.9883 7 18.2161 7 19.0709 7.74975C19.9256 8.49951 20.1414 9.76583 20.5731 12.2985L20.9384 14.4413C21.5357 17.946 21.8344 19.6983 20.9147 20.8491C19.995 22 18.2959 22 14.8979 22H9.1021C5.70406 22 4.00504 22 3.08533 20.8491C2.16562 19.6983 2.4643 17.946 3.06164 14.4413Z"
+                  stroke="currentColor" stroke-width="1.5" />
+                <path
+                  d="M7.5 9L7.71501 5.98983C7.87559 3.74176 9.7462 2 12 2C14.2538 2 16.1244 3.74176 16.285 5.98983L16.5 9"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <div class="count_bag">1</div>
+            </div>
+            <p>Bag</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header-container">
+    
+        <nav class="main-nav" id="main-nav">
+            <a href="#" class="nav-link active" data-dropdown="women-ethnic">Women Ethnic</a>
+            <a href="#" class="nav-link" data-dropdown="women-western">Women Western</a>
+            <a href="#" class="nav-link" data-dropdown="men">Men</a>
+            <a href="#" class="nav-link" data-dropdown="kids">Kids</a>
+            <a href="#" class="nav-link" data-dropdown="home">Home & Kitchen</a>
+            <a href="#" class="nav-link" data-dropdown="beauty">Beauty & Health</a>
+            <a href="#" class="nav-link" data-dropdown="jewellery">Jewellery & Accessories</a>
+            <a href="#" class="nav-link" data-dropdown="bags">Bags & Footwear</a>
+            <a href="#" class="nav-link" data-dropdown="electronics">Electronics</a>
+        </nav>
+
+        <!-- Women Ethnic Dropdown -->
+        <div class="dropdown-container" id="women-ethnic-dropdown">
+            <div class="dropdown-content">
+                <div class="dropdown-column">
+                    <div class="column-title">Sarees</div>
+                    <a href="#" class="dropdown-item">All Sarees</a>
+                    <a href="#" class="dropdown-item">Silk Sarees</a>
+                    <a href="#" class="dropdown-item">Banarasi Silk Sarees</a>
+                    <a href="#" class="dropdown-item">Cotton Sarees</a>
+                    <a href="#" class="dropdown-item">Georgette Sarees</a>
+                    <a href="#" class="dropdown-item">Chiffon Sarees</a>
+                    <a href="#" class="dropdown-item">Heavy Work Sarees</a>
+                    <a href="#" class="dropdown-item">Net Sarees</a>
+                </div>
+                <div class="dropdown-column">
+                    <div class="column-title">Kurtis</div>
+                    <a href="#" class="dropdown-item">All Kurtis</a>
+                    <a href="#" class="dropdown-item">Anarkali Kurtis</a>
+                    <a href="#" class="dropdown-item">Rayon Kurtis</a>
+                    <a href="#" class="dropdown-item">Cotton Kurtis</a>
+                    <a href="#" class="dropdown-item">Chikankari Kurtis</a>
+                </div>
+                <div class="dropdown-column">
+                    <div class="column-title">Kurta Sets</div>
+                    <a href="#" class="dropdown-item">All Kurta Sets</a>
+                    <a href="#" class="dropdown-item">Kurta Palazzo Sets</a>
+                    <a href="#" class="dropdown-item">Rayon Kurta Sets</a>
+                    <a href="#" class="dropdown-item">Kurta Pant Sets</a>
+                    <a href="#" class="dropdown-item">Cotton Kurta Sets</a>
+                    <a href="#" class="dropdown-item">Sharara Sets</a>
+                </div>
+                <div class="dropdown-column">
+                    <div class="column-title">Dupatta Sets</div>
+                    <a href="#" class="dropdown-item">Cotton Sets</a>
+                    <a href="#" class="dropdown-item">Rayon Sets</a>
+                    <a href="#" class="dropdown-item">Printed Sets</a>
+                </div>
+                <div class="dropdown-column">
+                    <div class="column-title">Suits & Dress Material</div>
+                    <a href="#" class="dropdown-item">All Suits & Dress Material</a>
+                    <a href="#" class="dropdown-item">Cotton Suits</a>
+                    <a href="#" class="dropdown-item">Embroidered Suits</a>
+                    <a href="#" class="dropdown-item">Crepe Suits</a>
+                    <a href="#" class="dropdown-item">Silk Suits</a>
+                    <a href="#" class="dropdown-item">Patiala Suits</a>
+                </div>
+                <div class="dropdown-column">
+                    <div class="column-title">Lehengas</div>
+                    <a href="#" class="dropdown-item">Lehenga Cholis</a>
+                    <a href="#" class="dropdown-item">Net Lehenga</a>
+                    <a href="#" class="dropdown-item">Bridal Lehenga</a>
+                </div>
+                <div class="dropdown-column">
+                    <div class="column-title">Other Ethnic</div>
+                    <a href="#" class="dropdown-item">Blouses</a>
+                    <a href="#" class="dropdown-item">Dupattas</a>
+                    <a href="#" class="dropdown-item">Lehanga</a>
+                    <a href="#" class="dropdown-item">Gown</a>
+                    <a href="#" class="dropdown-item">Skirts & Bottomwear</a>
+                    <a href="#" class="dropdown-item">Islamic Fashion</a>
+                    <a href="#" class="dropdown-item">Petticoats</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Other dropdowns can be added following the same structure -->
+    </header>
+
+    <!-- <div class="d-flex mt-3 justify-content-center category_content" style="background-color: #90201f;">
+      <ul class="nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button">
+            Health Resource Center
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Mental Health</a></li>
+            <li><a class="dropdown-item" href="#">Fitness Tips</a></li>
+            <li><a class="dropdown-item" href="#">Diet & Nutrition</a></li>
+            <li><a class="dropdown-item" href="#">Mental Health</a></li>
+            <li><a class="dropdown-item" href="#">Fitness Tips</a></li>
+            <li><a class="dropdown-item" href="#">Diet & Nutrition</a></li>
+          </ul>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Mental Health</a></li>
+            <li><a class="dropdown-item" href="#">Fitness Tips</a></li>
+            <li><a class="dropdown-item" href="#">Diet & Nutrition</a></li>
+            <li><a class="dropdown-item" href="#">Mental Health</a></li>
+            <li><a class="dropdown-item" href="#">Fitness Tips</a></li>
+            <li><a class="dropdown-item" href="#">Diet & Nutrition</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button">
+            Health Resource Center
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Mental Health</a></li>
+            <li><a class="dropdown-item" href="#">Fitness Tips</a></li>
+            <li><a class="dropdown-item" href="#">Diet & Nutrition</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button">
+            Health Resource Center
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Mental Health</a></li>
+            <li><a class="dropdown-item" href="#">Fitness Tips</a></li>
+            <li><a class="dropdown-item" href="#">Diet & Nutrition</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button">
+            Health Resource Center
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Mental Health</a></li>
+            <li><a class="dropdown-item" href="#">Fitness Tips</a></li>
+            <li><a class="dropdown-item" href="#">Diet & Nutrition</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button">
+            Health Resource Center
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Mental Health</a></li>
+            <li><a class="dropdown-item" href="#">Fitness Tips</a></li>
+            <li><a class="dropdown-item" href="#">Diet & Nutrition</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div> -->
+  </div>
+  <!--======End Web Header ====== -->
+  <!--======Start Mobile Header ====== -->
+  <div class="container-fluid d-lg-none d-block p-3 shadow-lg sticky-top bg-white">
+    <div class="row align-items-center">
+
+      <div class="col-6">
+        <div class="text-center">
+          <img class="responsive_logo" src="assets/irizonfinal[1].png" alt="mobile_logo" width="100%" />
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="text-end">
+          <svg class="mobile_search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+            fill="none" style="cursor: pointer">
+            <path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path
+              d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z"
+              stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8 mx-auto">
+        <div class="text-center">
+          <div class="header_input-container mt-3 position-relative">
+            <input class="input-simple searchInput" type="text" placeholder="Search" id="mobile-search" />
+            <span class="search-icon position-absolute" style="right: 10px; top: 50%; transform: translateY(-50%)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                <path fill="#838D99"
+                  d="M13.22 14.63a8 8 0 1 1 1.41-1.41l4.29 4.29a1 1 0 1 1-1.41 1.41l-4.29-4.29zm-.66-2.07a6 6 0 1 0-8.49-8.49 6 6 0 0 0 8.49 8.49z">
+                </path>
+              </svg>
+            </span>
+
+            <!-- Mobile Search Results -->
+            <!-- <div class="search-section position-absolute w-100 bg-white shadow-sm rounded" id="mobile-results"
+              style="display: none; z-index: 100000;">
+              <div class="alert alert-light m-2">
+                <strong>Showing results for '<span class="text-success" id="mobile-query">mamrw</span>'</strong>
+              </div>
+              <div class="list-group">
+                <div class="list-group-item">
+                  <div class="row align-items-center">
+                    <div class="col-lg-4">
+                      <div class="d-flex align-items-center">
+                        <img src="assets/product-17-1.jpg" alt="Product" class="rounded me-3" width="60" />
+                        <div>
+                          <h6 class="mb-1">Grocery Farm</h6>
+                          <p class="text-muted small">Mamra Almonds - 200 g</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="d-flex justify-content-between">
+                        <p class="mb-1 fw-bold">₹629.3</p>
+                        <p class="mb-1 fw-bold text-success">30% OFF</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="d-flex align-items-center justify-content-end">
+                        <input type="number" class="form-control form-control-sm w-50 me-2" value="1" min="1" />
+                        <button class="btn btn-outline-danger btn-sm">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-group-item">
+                  <div class="row align-items-center">
+                    <div class="col-lg-4">
+                      <div class="d-flex align-items-center">
+                        <img src="assets/product-17-1.jpg" alt="Product" class="rounded me-3" width="60" />
+                        <div>
+                          <h6 class="mb-1">Grocery Farm</h6>
+                          <p class="text-muted small">Mamra Almonds - 200 g</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="d-flex justify-content-between">
+                        <p class="mb-1 fw-bold">₹629.3</p>
+                        <p class="mb-1 fw-bold text-success">30% OFF</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="d-flex align-items-center justify-content-end">
+                        <input type="number" class="form-control form-control-sm w-50 me-2" value="1" min="1" />
+                        <button class="btn btn-outline-danger btn-sm">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-3">
+                  <a href="#" class="btn btn-link text-danger fw-bold">View all search results</a>
+                </div>
+              </div>
+            </div> -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!--======End Mobile Header ====== -->
+  <!-- ======Start Bottom Bar====== -->
+  <nav class="d-block d-lg-none bottom-bar">
+    <div class="nav-box">
+      <ul class="nav-container">
+        <li class="nav__item active">
+          <a href="#Home" class="nav__item-link">
+            <div class="nav__item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                fill="none">
+                <path d="M12 17H12.009" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M20 8.5V13.5C20 17.2712 20 19.1569 18.8284 20.3284C17.6569 21.5 15.7712 21.5 12 21.5C8.22876 21.5 6.34315 21.5 5.17157 20.3284C4 19.1569 4 17.2712 4 13.5V8.5"
+                  stroke="currentColor" stroke-width="1.5" />
+                <path
+                  d="M22 10.5L17.6569 6.33548C14.9902 3.77849 13.6569 2.5 12 2.5C10.3431 2.5 9.00981 3.77849 6.34315 6.33548L2 10.5"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <span class="nav__item-text">Home</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#Profile" class="nav__item-link">
+            <div class="nav__item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                fill="none">
+                <path
+                  d="M6.57757 15.4816C5.1628 16.324 1.45336 18.0441 3.71266 20.1966C4.81631 21.248 6.04549 22 7.59087 22H16.4091C17.9545 22 19.1837 21.248 20.2873 20.1966C22.5466 18.0441 18.8372 16.324 17.4224 15.4816C14.1048 13.5061 9.89519 13.5061 6.57757 15.4816Z"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M16.5 6.5C16.5 8.98528 14.4853 11 12 11C9.51472 11 7.5 8.98528 7.5 6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5Z"
+                  stroke="currentColor" stroke-width="1.5" />
+              </svg>
+            </div>
+            <span class="nav__item-text">Profile</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#Messages" class="nav__item-link">
+            <div class="nav__item-icon">
+              <div class="wishlist_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                  <path
+                    d="M19.4626 3.99415C16.7809 2.34923 14.4404 3.01211 13.0344 4.06801C12.4578 4.50096 12.1696 4.71743 12 4.71743C11.8304 4.71743 11.5422 4.50096 10.9656 4.06801C9.55962 3.01211 7.21909 2.34923 4.53744 3.99415C1.01807 6.15294 0.221721 13.2749 8.33953 19.2834C9.88572 20.4278 10.6588 21 12 21C13.3412 21 14.1143 20.4278 15.6605 19.2834C23.7783 13.2749 22.9819 6.15294 19.4626 3.99415Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                <div class="count">1</div>
+              </div>
+            </div>
+            <span class="nav__item-text">Wishlist</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#Help" class="nav__item-link">
+            <div class="nav__item-icon">
+              <div class="bag_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                  <path
+                    d="M3.06164 14.4413L3.42688 12.2985C3.85856 9.76583 4.0744 8.49951 4.92914 7.74975C5.78389 7 7.01171 7 9.46734 7H14.5327C16.9883 7 18.2161 7 19.0709 7.74975C19.9256 8.49951 20.1414 9.76583 20.5731 12.2985L20.9384 14.4413C21.5357 17.946 21.8344 19.6983 20.9147 20.8491C19.995 22 18.2959 22 14.8979 22H9.1021C5.70406 22 4.00504 22 3.08533 20.8491C2.16562 19.6983 2.4643 17.946 3.06164 14.4413Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path
+                    d="M7.5 9L7.71501 5.98983C7.87559 3.74176 9.7462 2 12 2C14.2538 2 16.1244 3.74176 16.285 5.98983L16.5 9"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                <div class="count_bag">1</div>
+              </div>
+            </div>
+            <span class="nav__item-text">Cart</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- ======End Bottom Bar====== -->
+  <!-- ======Start Login Modal====== -->
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal login-modal">
+    <div class="modal-content login-content">
+      <span class="close-btn close-login">&times;</span>
+      <h2>Login</h2>
+      <form>
+        <label for="login-email">Email:</label>
+        <input type="email" id="login-email" placeholder="Enter your email" required>
+
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" placeholder="Enter your password" required>
+
+        <button type="submit" class="btn login-btn">Login</button>
+      </form>
+      <p>Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+    </div>
+  </div>
+  <!-- ======End Login Modal====== -->
+  <!-- ======Start Sign up Modal====== -->
+  <!-- Signup Modal -->
+  <div id="signupModal" class="modal signup-modal">
+    <div class="modal-content signup-content">
+      <span class="close-btn close-signup">&times;</span>
+      <h2>Sign Up</h2>
+      <form>
+        <label for="signup-name">Full Name:</label>
+        <input type="text" id="signup-name" placeholder="Enter your name" required>
+
+        <label for="signup-email">Email:</label>
+        <input type="email" id="signup-email" placeholder="Enter your email" required>
+
+        <label for="signup-password">Password:</label>
+        <input type="password" id="signup-password" placeholder="Create a password" required>
+
+        <button type="submit" class="btn signup-btn">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+    </div>
+  </div>
+  <!-- ======End Sign up Modal====== -->
+
+
+  <!-- ======Start Hero Section====== -->
+  <div class="conatiner-fluid p-0">
+    <div class="row service_Section p-0">
+      <div class="service_Section_overlay p-0">
+        <div class="service_Section_content">
+          <h2 class="text-white text-uppercase">Products</h2>
+          <p class="small_content pt-4">
+            <span style="color: #90201f">Home </span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              color="#ffffff"
+              fill="none"
+            >
+              <path
+                d="M20.0001 11.9998L4.00012 11.9998"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15.0003 17C15.0003 17 20.0002 13.3176 20.0002 12C20.0002 10.6824 15.0002 7 15.0002 7"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span class="text-white text-uppercase"> Products</span>
+          </p>
+        </div>
+      </div>
+      <img
+        class="p-0"
+        src="assets/hero-bg.jpg"
+        width="100%"
+        alt="Service Background"
+      />
+    </div>
+  </div>
+    <!-- ======End Hero Section====== -->
+      <!-- ======Start Cart Section====== -->
+    <div class="container-fluid product-section p-4">
+        <div class="container my-5 ">
+            <div class="row">
+                    <!-- Category  -->
+                    <div class="col-lg-4">
+                   <!-- Search Section -->
+                <div class="card shadow-sm p-4 mb-4">
+                    <h3 class="fw-bold main-topic">Search</h3>
+                    <hr>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <button class="product-search-btn" type="button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- Category Section -->
+                <div class="card shadow-sm p-4 mb-4">
+                    <h3 class="fw-bold main-topic">Category</h3>
+                    <hr>
+                    <ul class="list-unstyled">
+                        <li >
+                            <a class="d-flex justify-content-between text-muted  py-2" href="">
+                                <h5>Medicine</h5> 
+                                <h5>(15)</h5></a>
+                        </li>
+                        <li >
+                            <a class="d-flex justify-content-between text-muted  py-2" href="">
+                                <h5>Medicine</h5> 
+                                <h5>(15)</h5></a>
+                        </li>
+                        <li >
+                            <a class="d-flex justify-content-between text-muted  py-2" href="">
+                                <h5>Medicine</h5> 
+                                <h5>(15)</h5></a>
+                        </li>
+                    </ul>
+                </div>
+                 <!-- Brands Section -->
+                 <div class="card shadow-sm p-4 mb-4">
+                    <h3 class="fw-bold main-topic">Brands</h3>
+                    <hr>
+                    <ul class="list-unstyled">
+                        <li >
+                            <a class="d-flex justify-content-between text-muted  py-2" href="">
+                               <div class="d-flex">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <h5 class="ms-2">Medicine</h5> 
+                               </div>
+                                <h5>(15)</h5>
+                            </a>
+                        </li>
+                        <li >
+                            <a class="d-flex justify-content-between text-muted  py-2" href="">
+                               <div class="d-flex">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <h5 class="ms-2">Medicine</h5> 
+                               </div>
+                                <h5>(15)</h5>
+                            </a>
+                        </li>
+                        <li >
+                            <a class="d-flex justify-content-between text-muted  py-2" href="">
+                               <div class="d-flex">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <h5 class="ms-2">Medicine</h5> 
+                               </div>
+                                <h5>(15)</h5>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                  <!-- Price Section -->
+                  <div class="card shadow-sm p-4 mb-4">
+                    <h3 class="fw-bold main-topic">Range</h3>
+                    <hr>
+                  
+                </div>
+                    </div>
+                     <!-- Products -->
+                <div class="col-lg-8">
+              <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="top-product-card p-3 shadow-sm">
+                        <a href="Product.html" class="text-decoration-none">
+                          <div class="position-relative product-card-container">
+                            <img src="assets/product-17-1.jpg" class="card-img-top" alt="Vitamin K2">
+                            <img src="assets/product-18-2.jpg" class="card-img-bottom" alt="Vitamin">
+          
+                            <a  class="btn wishlist-icon-container position-absolute top-0 end-0 m-2 rounded-circle">
+                              <i class="fa-regular fa-heart"></i>
+                            </a >
+                          </div>
+                       
+                          <div class="top-product-card-body mb-2">
+                            <p class="text-secondary small text-capitalize">Diabetes, Health Conditions</p>
+                            <h5 class="card-title text-capitalize text-dark">Waterpik irrigador dental</h5>
+          
+                            <!-- Rating -->
+                            <div class="d-flex align-items-center mb-2">
+                              <span class="text-warning">★★★★☆</span>
+                              <span class="ms-2">(4.0)</span>
+                            </div>
+          
+                            <p class="card-text fw-bold">
+                              <span style="text-decoration: line-through; color: gray;">₹123.40</span>
+                              <span style="color: red; font-weight: bold; margin-left: 8px;">₹99.00</span>
+                            </p>
+                      
+                      
+                      </div>
+                    </a>
+                      <!-- Add to Cart a  -->
+                      <a class="btn btn-primary w-100" href="Cart.html">
+                        <i class="bi bi-cart-plus"></i> ADD TO CART
+                      </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="top-product-card p-3 shadow-sm">
+                        <a href="Product.html" class="text-decoration-none">
+                          <div class="position-relative product-card-container">
+                            <img src="assets/product-17-1.jpg" class="card-img-top" alt="Vitamin K2">
+                            <img src="assets/product-18-2.jpg" class="card-img-bottom" alt="Vitamin">
+          
+                            <a  class="btn wishlist-icon-container position-absolute top-0 end-0 m-2 rounded-circle">
+                              <i class="fa-regular fa-heart"></i>
+                            </a >
+                          </div>
+                       
+                          <div class="top-product-card-body mb-2">
+                            <p class="text-secondary small text-capitalize">Diabetes, Health Conditions</p>
+                            <h5 class="card-title text-capitalize text-dark">Waterpik irrigador dental</h5>
+          
+                            <!-- Rating -->
+                            <div class="d-flex align-items-center mb-2">
+                              <span class="text-warning">★★★★☆</span>
+                              <span class="ms-2">(4.0)</span>
+                            </div>
+          
+                            <p class="card-text fw-bold">
+                              <span style="text-decoration: line-through; color: gray;">₹123.40</span>
+                              <span style="color: red; font-weight: bold; margin-left: 8px;">₹99.00</span>
+                            </p>
+                      
+                      
+                      </div>
+                    </a>
+                      <!-- Add to Cart a  -->
+                      <a class="btn btn-primary w-100" href="Cart.html">
+                        <i class="bi bi-cart-plus"></i> ADD TO CART
+                      </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="top-product-card p-3 shadow-sm">
+                        <a href="Product.html" class="text-decoration-none">
+                          <div class="position-relative product-card-container">
+                            <img src="assets/product-17-1.jpg" class="card-img-top" alt="Vitamin K2">
+                            <img src="assets/product-18-2.jpg" class="card-img-bottom" alt="Vitamin">
+          
+                            <a  class="btn wishlist-icon-container position-absolute top-0 end-0 m-2 rounded-circle">
+                              <i class="fa-regular fa-heart"></i>
+                            </a >
+                          </div>
+                       
+                          <div class="top-product-card-body mb-2">
+                            <p class="text-secondary small text-capitalize">Diabetes, Health Conditions</p>
+                            <h5 class="card-title text-capitalize text-dark">Waterpik irrigador dental</h5>
+          
+                            <!-- Rating -->
+                            <div class="d-flex align-items-center mb-2">
+                              <span class="text-warning">★★★★☆</span>
+                              <span class="ms-2">(4.0)</span>
+                            </div>
+          
+                            <p class="card-text fw-bold">
+                              <span style="text-decoration: line-through; color: gray;">₹123.40</span>
+                              <span style="color: red; font-weight: bold; margin-left: 8px;">₹99.00</span>
+                            </p>
+                      
+                      
+                      </div>
+                    </a>
+                      <!-- Add to Cart a  -->
+                      <a class="btn btn-primary w-100" href="Cart.html">
+                        <i class="bi bi-cart-plus"></i> ADD TO CART
+                      </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="top-product-card p-3 shadow-sm">
+                        <a href="Product.html" class="text-decoration-none">
+                          <div class="position-relative product-card-container">
+                            <img src="assets/product-17-1.jpg" class="card-img-top" alt="Vitamin K2">
+                            <img src="assets/product-18-2.jpg" class="card-img-bottom" alt="Vitamin">
+          
+                            <a  class="btn wishlist-icon-container position-absolute top-0 end-0 m-2 rounded-circle">
+                              <i class="fa-regular fa-heart"></i>
+                            </a >
+                          </div>
+                       
+                          <div class="top-product-card-body mb-2">
+                            <p class="text-secondary small text-capitalize">Diabetes, Health Conditions</p>
+                            <h5 class="card-title text-capitalize text-dark">Waterpik irrigador dental</h5>
+          
+                            <!-- Rating -->
+                            <div class="d-flex align-items-center mb-2">
+                              <span class="text-warning">★★★★☆</span>
+                              <span class="ms-2">(4.0)</span>
+                            </div>
+          
+                            <p class="card-text fw-bold">
+                              <span style="text-decoration: line-through; color: gray;">₹123.40</span>
+                              <span style="color: red; font-weight: bold; margin-left: 8px;">₹99.00</span>
+                            </p>
+                      
+                      
+                      </div>
+                    </a>
+                      <!-- Add to Cart a  -->
+                      <a class="btn btn-primary w-100" href="Cart.html">
+                        <i class="bi bi-cart-plus"></i> ADD TO CART
+                      </a>
+                    </div>
+                </div>
+              </div>
+               
+                </div>
+        
+            
+            </div>
+          
+        </div>
+    </div>
+        <!-- ======End Cart Section====== -->
+
+
+
+
+     <!-- ===Footer-Section-Start=== -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-7">
+          <div class="f-box">
+            <div class="f-logo">
+              <img src="assets/irizonfinal[1].png" alt="Iriszon" />
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, perspiciatis dolore numquam sed sit
+              doloremque veritatis ratione ex minus illum. </p>
+            <ul class="social-link">
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-5">
+          <div class="f-box">
+            <h4>Quick Links</h4>
+            <ul>
+              <li>
+                <a href="index.html"><span>Home</span></a>
+              </li>
+              <li>
+                <a href="#about"><span>About</span></a>
+              </li>
+
+              </li>
+              <li>
+                <a href="pliocy.html"><span>Privacy Policy</span></a>
+              </li>
+              <li>
+                <a href="terms.html"><span>Terms & Conditions</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="f-box">
+            <h4>Contact Info</h4>
+            <ul>
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                Lorem ipsum dolor sit amet consectetur
+              </li>
+
+              <li>
+                <i class="fa-solid fa-phone"></i><a href="tel:+91 123456789">+91 1234567689</a>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-envelope"></i><a href="mailto:@gmail.com">@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="copy-right">
+          <p>
+            © Copyright 2025 | Powered by IRISZON. and
+            Designed By
+            <a href="#">#</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="d-block d-lg-none"></div>
+  <!-- ===Footer-Section-End=== -->
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Animation Effects CDN  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  
+    <script src="script.js"></script>
+</body>
