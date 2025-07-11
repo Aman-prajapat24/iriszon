@@ -480,7 +480,10 @@ mobileInput.addEventListener("input", () => {
 ////////// Search result box  end ////////
 
 
-// header 
+
+
+/////// header section start ////////
+
  const toggleBtn = document.getElementById('toggleSearch');
   const searchBar = document.getElementById('mobileSearchBar');
 
@@ -507,5 +510,24 @@ window.addEventListener("scroll", function () {
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }, false);
 
+/////// header section end ////////
 
 
+/* ======= View Shop Page Start ======= */
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterBtns = document.querySelectorAll(".mobile-filter-bar .filter-btn");
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-bs-target");
+        if (target) {
+          const modal = new bootstrap.Modal(document.querySelector(target));
+          modal.show();
+        }
+      });
+    });
+  });
+
+/* ======= View Shop Page end ======= */
