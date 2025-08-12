@@ -20,11 +20,413 @@
 
 <body>
 
+  <header>
+    <!--======Start Web Header ====== -->
+    <div class="shadow-lg fixed-top bg-white d-none d-lg-block" style="z-index: 1050;">
+      <div class="container-fluid px-0">
+        <div class="web-header">
+          <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 px-3">
+              <!-- Logo -->
+              <div class="logo d-flex align-items-center">
+                <img src="assets/irizonfinal[1].png" alt="logo" style="height: 75px;" />
+              </div>
 
+              <!-- Search Bar -->
+              <div class="search-area flex-grow-1 mx-3">
+                <div class="header_input-container position-relative">
+                  <input class="input-simple searchInput w-100" type="text" placeholder="Search" id="web-search" />
+                  <span class="search-icon position-absolute">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="product-suggestion-box d-none" id="searchSuggestions">
+                <p>Showing results for '<span id="searchKeyword" class="text-success"></span>'</p>
+                <table id="suggestionTable">
+                  <!-- JS will insert rows here -->
+                </table>
+              </div>
+
+
+              <!-- Supplier Button -->
+              <div>
+                <a href="become.html"> <button class="seller_button">Become a Supplier</button></a>
+              </div>
+
+              <!-- Icons -->
+              <div class="d-flex align-items-center gap-4">
+                <!-- User -->
+                <a href="login.html">
+                  <div class="text-center">
+                  <div class="dropdown">
+                    <i class="fas fa-user fa-lg"></i>
+                    <p class="mb-0">Profile</p>
+                  </div>
+                </div>
+                </a>
+
+                <!-- Wishlist -->
+                <div class="text-center position-relative">
+                  <div class="wishlist_icon">
+                    <i class="fas fa-heart fa-lg"></i>
+                    <div class="count">1</div>
+                  </div>
+                  <p class="mb-0">Wishlist</p>
+                </div>
+
+                <!-- Bag -->
+                <div class="text-center position-relative">
+                  <a href="cart.html">
+                    <div class="bag_icon">
+                      <i class="fas fa-shopping-bag fa-lg"></i>
+                      <div class="count_bag">1</div>
+                      <p class="mb-0">Bag</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Navigation -->
+        <div class="header-container">
+          <nav class="main-nav" id="main-nav">
+            <a href="#" class="nav-link active" data-dropdown="women-ethnic">Women Ethnic</a>
+            <a href="#" class="nav-link" data-dropdown="women-western">Women Western</a>
+            <a href="#" class="nav-link" data-dropdown="men">Men</a>
+            <a href="#" class="nav-link" data-dropdown="kids">Kids</a>
+            <a href="#" class="nav-link" data-dropdown="home">Home & Kitchen</a>
+            <a href="#" class="nav-link" data-dropdown="beauty">Beauty & Health</a>
+            <a href="#" class="nav-link" data-dropdown="jewellery">Jewellery & Accessories</a>
+            <a href="#" class="nav-link" data-dropdown="bags">Bags & Footwear</a>
+            <a href="#" class="nav-link" data-dropdown="electronics">Electronics</a>
+            <a href="#" class="nav-link" data-dropdown="electronics">Sports & Fitness</a>
+            <a href="#" class="nav-link" data-dropdown="electronics">Car & Motorbike</a>
+          </nav>
+
+          <!-- Dropdown Example -->
+          <div class="dropdown-container" id="women-ethnic-dropdown">
+            <div class="dropdown-content">
+              <div class="dropdown-column">
+                <div class="column-title">Sarees</div>
+                <a href="#" class="dropdown-item">All Sarees</a>
+                <a href="#" class="dropdown-item">Silk Sarees</a>
+                <a href="#" class="dropdown-item">Banarasi Silk Sarees</a>
+                <a href="#" class="dropdown-item">Cotton Sarees</a>
+                <a href="#" class="dropdown-item">Georgette Sarees</a>
+                <a href="#" class="dropdown-item">Chiffon Sarees</a>
+                <a href="#" class="dropdown-item">Heavy Work Sarees</a>
+                <a href="#" class="dropdown-item">Net Sarees</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Kurtis</div>
+                <a href="#" class="dropdown-item">All Kurtis</a>
+                <a href="#" class="dropdown-item">Anarkali Kurtis</a>
+                <a href="#" class="dropdown-item">Rayon Kurtis</a>
+                <a href="#" class="dropdown-item">Cotton Kurtis</a>
+                <a href="#" class="dropdown-item">Chikankari Kurtis</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Kurta Sets</div>
+                <a href="#" class="dropdown-item">All Kurta Sets</a>
+                <a href="#" class="dropdown-item">Kurta Palazzo Sets</a>
+                <a href="#" class="dropdown-item">Rayon Kurta Sets</a>
+                <a href="#" class="dropdown-item">Kurta Pant Sets</a>
+                <a href="#" class="dropdown-item">Cotton Kurta Sets</a>
+                <a href="#" class="dropdown-item">Sharara Sets</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Dupatta Sets</div>
+                <a href="#" class="dropdown-item">Cotton Sets</a>
+                <a href="#" class="dropdown-item">Rayon Sets</a>
+                <a href="#" class="dropdown-item">Printed Sets</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Suits & Dress Material</div>
+                <a href="#" class="dropdown-item">All Suits & Dress Material</a>
+                <a href="#" class="dropdown-item">Cotton Suits</a>
+                <a href="#" class="dropdown-item">Embroidered Suits</a>
+                <a href="#" class="dropdown-item">Crepe Suits</a>
+                <a href="#" class="dropdown-item">Silk Suits</a>
+                <a href="#" class="dropdown-item">Patiala Suits</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Lehengas</div>
+                <a href="#" class="dropdown-item">Lehenga Cholis</a>
+                <a href="#" class="dropdown-item">Net Lehenga</a>
+                <a href="#" class="dropdown-item">Bridal Lehenga</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Other Ethnic</div>
+                <a href="#" class="dropdown-item">Blouses</a>
+                <a href="#" class="dropdown-item">Dupattas</a>
+                <a href="#" class="dropdown-item">Lehanga</a>
+                <a href="#" class="dropdown-item">Gown</a>
+                <a href="#" class="dropdown-item">Skirts & Bottomwear</a>
+                <a href="#" class="dropdown-item">Islamic Fashion</a>
+                <a href="#" class="dropdown-item">Petticoats</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Suits & Dress Material</div>
+                <a href="#" class="dropdown-item">All Suits & Dress Material</a>
+                <a href="#" class="dropdown-item">Cotton Suits</a>
+                <a href="#" class="dropdown-item">Embroidered Suits</a>
+                <a href="#" class="dropdown-item">Crepe Suits</a>
+                <a href="#" class="dropdown-item">Silk Suits</a>
+                <a href="#" class="dropdown-item">Patiala Suits</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown-container" id="women-ethnic-dropdown">
+            <div class="dropdown-content">
+              <div class="dropdown-column">
+                <div class="column-title">Sarees</div>
+                <a href="#" class="dropdown-item">All Sarees</a>
+                <a href="#" class="dropdown-item">Silk Sarees</a>
+                <a href="#" class="dropdown-item">Banarasi Silk Sarees</a>
+                <a href="#" class="dropdown-item">Cotton Sarees</a>
+                <a href="#" class="dropdown-item">Georgette Sarees</a>
+                <a href="#" class="dropdown-item">Chiffon Sarees</a>
+                <a href="#" class="dropdown-item">Heavy Work Sarees</a>
+                <a href="#" class="dropdown-item">Net Sarees</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Kurtis</div>
+                <a href="#" class="dropdown-item">All Kurtis</a>
+                <a href="#" class="dropdown-item">Anarkali Kurtis</a>
+                <a href="#" class="dropdown-item">Rayon Kurtis</a>
+                <a href="#" class="dropdown-item">Cotton Kurtis</a>
+                <a href="#" class="dropdown-item">Chikankari Kurtis</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Kurta Sets</div>
+                <a href="#" class="dropdown-item">All Kurta Sets</a>
+                <a href="#" class="dropdown-item">Kurta Palazzo Sets</a>
+                <a href="#" class="dropdown-item">Rayon Kurta Sets</a>
+                <a href="#" class="dropdown-item">Kurta Pant Sets</a>
+                <a href="#" class="dropdown-item">Cotton Kurta Sets</a>
+                <a href="#" class="dropdown-item">Sharara Sets</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Dupatta Sets</div>
+                <a href="#" class="dropdown-item">Cotton Sets</a>
+                <a href="#" class="dropdown-item">Rayon Sets</a>
+                <a href="#" class="dropdown-item">Printed Sets</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Suits & Dress Material</div>
+                <a href="#" class="dropdown-item">All Suits & Dress Material</a>
+                <a href="#" class="dropdown-item">Cotton Suits</a>
+                <a href="#" class="dropdown-item">Embroidered Suits</a>
+                <a href="#" class="dropdown-item">Crepe Suits</a>
+                <a href="#" class="dropdown-item">Silk Suits</a>
+                <a href="#" class="dropdown-item">Patiala Suits</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Lehengas</div>
+                <a href="#" class="dropdown-item">Lehenga Cholis</a>
+                <a href="#" class="dropdown-item">Net Lehenga</a>
+                <a href="#" class="dropdown-item">Bridal Lehenga</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Other Ethnic</div>
+                <a href="#" class="dropdown-item">Blouses</a>
+                <a href="#" class="dropdown-item">Dupattas</a>
+                <a href="#" class="dropdown-item">Lehanga</a>
+                <a href="#" class="dropdown-item">Gown</a>
+                <a href="#" class="dropdown-item">Skirts & Bottomwear</a>
+                <a href="#" class="dropdown-item">Islamic Fashion</a>
+                <a href="#" class="dropdown-item">Petticoats</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Suits & Dress Material</div>
+                <a href="#" class="dropdown-item">All Suits & Dress Material</a>
+                <a href="#" class="dropdown-item">Cotton Suits</a>
+                <a href="#" class="dropdown-item">Embroidered Suits</a>
+                <a href="#" class="dropdown-item">Crepe Suits</a>
+                <a href="#" class="dropdown-item">Silk Suits</a>
+                <a href="#" class="dropdown-item">Patiala Suits</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--======End Web Header ====== -->
+
+    <!--======Start Mobile Header ====== -->
+    <div class="mobile-header container-fluid d-lg-none py-2 shadow-lg fixed-top bg-white">
+      <div class="row align-items-center px-2">
+        <!-- Logo -->
+        <div class="col-6 text-start">
+          <img class="responsive_logo" src="assets/irizonfinal[1].png" alt="mobile_logo" style="height: 55px;" />
+        </div>
+
+        <!-- Search Icon -->
+        <div class="col-6 text-end">
+          <svg id="toggleSearch" class="mobile_search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28"
+            height="28" fill="none" style="cursor: pointer;">
+            <path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M20 11C20 6.03 15.97 2 11 2S2 6.03 2 11s4.03 9 9 9 9-4.03 9-9Z" stroke="currentColor"
+              stroke-width="1.5" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Search Bar Toggle -->
+      <div id="mobileSearchBar" class="row px-3 mt-2 d-none">
+        <div class="col-12">
+          <div class="position-relative">
+            <input class="form-control py-2 ps-3 pe-5 rounded-pill border" type="text" placeholder="Search products..."
+              id="mobile-search" />
+            <span class="position-absolute top-50 translate-middle-y" style="right: 15px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                <path fill="#838D99"
+                  d="M13.22 14.63a8 8 0 1 1 1.41-1.41l4.29 4.29a1 1 0 1 1-1.41 1.41l-4.29-4.29zm-.66-2.07a6 6 0 1 0-8.49-8.49 6 6 0 0 0 8.49 8.49z" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Suggestion Box -->
+      <div class="product-suggestion-box d-none mt-2" id="mobileSearchSuggestions">
+        <p class="px-3">Showing results for: '<span id="mobileSearchKeyword" class="text-success"></span>'</p>
+        <table class="table table-sm table-borderless" id="mobileSuggestionTable">
+          <!-- JS will insert rows -->
+        </table>
+      </div>
+    </div>
+
+    <!--======End Mobile Header ====== -->
+
+    <!-- ======Start Bottom Bar====== -->
+    <nav class="d-block d-lg-none bottom-bar">
+      <div class="nav-box">
+        <ul class="nav-container">
+          <li class="nav__item active">
+            <a href="#Home" class="nav__item-link">
+              <div class="nav__item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                  fill="none">
+                  <path d="M12 17H12.009" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M20 8.5V13.5C20 17.2712 20 19.1569 18.8284 20.3284C17.6569 21.5 15.7712 21.5 12 21.5C8.22876 21.5 6.34315 21.5 5.17157 20.3284C4 19.1569 4 17.2712 4 13.5V8.5"
+                    stroke="currentColor" stroke-width="1.5" />
+                  <path
+                    d="M22 10.5L17.6569 6.33548C14.9902 3.77849 13.6569 2.5 12 2.5C10.3431 2.5 9.00981 3.77849 6.34315 6.33548L2 10.5"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </div>
+              <span class="nav__item-text">Home</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="login.html" class="nav__item-link">
+              <div class="nav__item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                  fill="none">
+                  <path
+                    d="M6.57757 15.4816C5.1628 16.324 1.45336 18.0441 3.71266 20.1966C4.81631 21.248 6.04549 22 7.59087 22H16.4091C17.9545 22 19.1837 21.248 20.2873 20.1966C22.5466 18.0441 18.8372 16.324 17.4224 15.4816C14.1048 13.5061 9.89519 13.5061 6.57757 15.4816Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M16.5 6.5C16.5 8.98528 14.4853 11 12 11C9.51472 11 7.5 8.98528 7.5 6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5Z"
+                    stroke="currentColor" stroke-width="1.5" />
+                </svg>
+              </div>
+              <span class="nav__item-text">Profile</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#Messages" class="nav__item-link">
+              <div class="nav__item-icon">
+                <div class="wishlist_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                    <path
+                      d="M19.4626 3.99415C16.7809 2.34923 14.4404 3.01211 13.0344 4.06801C12.4578 4.50096 12.1696 4.71743 12 4.71743C11.8304 4.71743 11.5422 4.50096 10.9656 4.06801C9.55962 3.01211 7.21909 2.34923 4.53744 3.99415C1.01807 6.15294 0.221721 13.2749 8.33953 19.2834C9.88572 20.4278 10.6588 21 12 21C13.3412 21 14.1143 20.4278 15.6605 19.2834C23.7783 13.2749 22.9819 6.15294 19.4626 3.99415Z"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                  <div class="count">1</div>
+                </div>
+              </div>
+              <span class="nav__item-text">Wishlist</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="cart.html" class="nav__item-link">
+              <div class="nav__item-icon">
+                <div class="bag_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                    <path
+                      d="M3.06164 14.4413L3.42688 12.2985C3.85856 9.76583 4.0744 8.49951 4.92914 7.74975C5.78389 7 7.01171 7 9.46734 7H14.5327C16.9883 7 18.2161 7 19.0709 7.74975C19.9256 8.49951 20.1414 9.76583 20.5731 12.2985L20.9384 14.4413C21.5357 17.946 21.8344 19.6983 20.9147 20.8491C19.995 22 18.2959 22 14.8979 22H9.1021C5.70406 22 4.00504 22 3.08533 20.8491C2.16562 19.6983 2.4643 17.946 3.06164 14.4413Z"
+                      stroke="currentColor" stroke-width="1.5" />
+                    <path
+                      d="M7.5 9L7.71501 5.98983C7.87559 3.74176 9.7462 2 12 2C14.2538 2 16.1244 3.74176 16.285 5.98983L16.5 9"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                  </svg>
+                  <div class="count_bag">1</div>
+                </div>
+              </div>
+              <span class="nav__item-text">Cart</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- ======End Bottom Bar====== -->
+    <!-- ======Start Login Modal====== -->
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal login-modal">
+      <div class="modal-content login-content">
+        <span class="close-btn close-login">&times;</span>
+        <h2>Login</h2>
+        <form>
+          <label for="login-email">Email:</label>
+          <input type="email" id="login-email" placeholder="Enter your email" required>
+
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" placeholder="Enter your password" required>
+
+          <button type="submit" class="btn login-btn">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+      </div>
+    </div>
+    <!-- ======End Login Modal====== -->
+    <!-- ======Start Sign up Modal====== -->
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal signup-modal">
+      <div class="modal-content signup-content">
+        <span class="close-btn close-signup">&times;</span>
+        <h2>Sign Up</h2>
+        <form>
+          <label for="signup-name">Full Name:</label>
+          <input type="text" id="signup-name" placeholder="Enter your name" required>
+
+          <label for="signup-email">Email:</label>
+          <input type="email" id="signup-email" placeholder="Enter your email" required>
+
+          <label for="signup-password">Password:</label>
+          <input type="password" id="signup-password" placeholder="Create a password" required>
+
+          <button type="submit" class="btn signup-btn">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+      </div>
+    </div>
+    <!-- ======End Sign up Modal====== -->
+  </header>
 
 
   <!-- ======Start Hero Section====== -->
-  <div class="conatiner-fluid p-0">
+  <section class="cart_section">
+    <div class="conatiner-fluid p-0">
     <div class="row service_Section p-0">
       <div class="service_Section_overlay p-0">
         <div class="service_Section_content">
@@ -44,6 +446,7 @@
       <img class="p-0" src="assets/hero-bg.jpg" width="100%" alt="Service Background" />
     </div>
   </div>
+  </section>
   <!-- ======End Hero Section====== -->
 
   <!-- ======Start Cart Section====== -->
@@ -188,7 +591,7 @@
           <hr>
           <p class="fw-bold">Total: <span class="float-end text-success" id="total-inr">₹0.00</span></p>
           <div class="row">
-            <button class="checkout-btn">Checkout Now <span><i class="fa-solid fa-arrow-right"></i></span></button>
+           <a href="checkout.html"> <button class="checkout-btn">Checkout Now <span><i class="fa-solid fa-arrow-right"></i></span></button></a>
           </div>
         </div>
       </div>

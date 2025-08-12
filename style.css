@@ -1035,11 +1035,11 @@ header .dropdown-item:hover {
   opacity: 0;
 }
 
-.cards_section .product-card:hover .product-img.default {
+.cards_section .product-image:hover .product-img.default {
   opacity: 0;
 }
 
-.cards_section .product-card:hover .product-img.hover {
+.cards_section .product-image:hover .product-img.hover {
   opacity: 1;
 }
 
@@ -1182,13 +1182,23 @@ header .dropdown-item:hover {
     letter-spacing: 1px;
   }
 
-  .cards_section .product-card {
-    max-width: 100%;
-    padding: 1.3rem;
+ .cards_section .product-card {
+    padding: 0; /* pura card ka padding hata do */
+    overflow: hidden;
   }
+
 
   .cards_section .product-image {
     height: 200px;
+    margin-bottom: 1rem;
+   
+     border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+    .cards_section .product-img {
+    border-radius: 0;
+      border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
 
   .cards_section .product-title {
@@ -1203,6 +1213,13 @@ header .dropdown-item:hover {
   .cards_section .add-to-cart {
     padding: 12px;
     font-size: 1rem;
+  }
+  .cards_section .product-title,
+  .cards_section .product-rating,
+  .cards_section .price-section,
+  .cards_section .add-to-cart {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
 
@@ -1384,6 +1401,19 @@ header .dropdown-item:hover {
 /* ---Footer-Section-End--- */
 
 /* ---Product-Page-Start--- */
+
+.cart_section {
+  margin-top: 120px;
+}
+@media (max-width: 768px){
+  .cart_section {
+  margin-top: 75px;
+}
+}
+
+
+
+
 .service_Section {
   position: relative;
   width: 100%;
@@ -2449,6 +2479,7 @@ header .dropdown-item:hover {
 
 /* ======= Login & sign up start ======= */
 
+
 .auth-container {
   display: flex;
   width: 100%;
@@ -2461,6 +2492,7 @@ header .dropdown-item:hover {
   flex-direction: row;
 }
 
+/* Left Panel */
 .auth-container .welcome-panel {
   flex: 1;
   background: linear-gradient(135deg, #90201f, #bf2113);
@@ -2484,22 +2516,7 @@ header .dropdown-item:hover {
   max-width: 250px;
 }
 
-.auth-container .btn-outline {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-  padding: 10px 30px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.auth-container .btn-outline:hover {
-  background: white;
-  color: var(--primary-color);
-}
-
+/* Right Panel */
 .auth-container .form-section {
   flex: 1;
   padding: 40px;
@@ -2508,61 +2525,81 @@ header .dropdown-item:hover {
   justify-content: center;
 }
 
-.auth-container .form-box {
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.auth-container .form-box h2 {
-  margin-bottom: 20px;
+/* Mobile Login */
+.mobile-login {
+  max-width: 350px;
+  margin: auto;
   text-align: center;
 }
 
-.auth-container .input-group {
+.mobile-login h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.country-label {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
   margin-bottom: 20px;
+  padding-bottom: 5px;
 }
 
-.auth-container .input-group input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid var(--primary-color);
-  border-radius: 8px;
+.country-select {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 8px 0;
+  background: transparent;
+  cursor: pointer;
+  width: 140px;
 }
 
-.auth-container .btn {
+.phone-input input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.mobile-login .btn {
   background-color: var(--primary-color);
   color: white;
   border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  cursor: pointer;
+  padding: 12px;
+  border-radius: 6px;
   width: 100%;
+  margin-top: 10px;
   font-weight: bold;
+  cursor: pointer;
 }
 
-.auth-container .btn:hover {
+.mobile-login .btn:hover {
   background-color: var(--secondary-color);
 }
 
-.auth-container .forgot {
-  text-align: right;
-  font-size: 14px;
-  color: var(--primary-color);
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-.auth-container .switch-text {
-  text-align: center;
+.mobile-login .terms {
+  font-size: 12px;
+  color: #666;
   margin-top: 20px;
-  cursor: pointer;
+  line-height: 1.4;
+}
+
+.mobile-login .terms a {
   color: var(--primary-color);
+  text-decoration: none;
 }
 
-.auth-container .switch-text span {
-  font-weight: 700;
-  color: #000;
-}
-
+/* Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -2575,14 +2612,13 @@ header .dropdown-item:hover {
   }
 }
 
-/* Mobile Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .auth-container {
     flex-direction: column;
   }
 
   .auth-container .welcome-panel {
-    display: flex;
     width: 100%;
     padding: 20px;
     border-bottom: 1px solid #ccc;
@@ -2590,6 +2626,14 @@ header .dropdown-item:hover {
 
   .auth-container .form-section {
     padding: 30px;
+  }
+
+  .mobile-login h2 {
+    font-size: 18px;
+  }
+
+  .phone-input input {
+    font-size: 13px;
   }
 }
 
