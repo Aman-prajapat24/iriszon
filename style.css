@@ -2480,6 +2480,8 @@ header .dropdown-item:hover {
 /* ======= Login & sign up start ======= */
 
 
+
+
 .auth-container {
   display: flex;
   width: 100%;
@@ -2525,7 +2527,6 @@ header .dropdown-item:hover {
   justify-content: center;
 }
 
-/* Mobile Login */
 .mobile-login {
   max-width: 350px;
   margin: auto;
@@ -2534,7 +2535,7 @@ header .dropdown-item:hover {
 
 .mobile-login h2 {
   font-size: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .country-label {
@@ -2571,7 +2572,7 @@ header .dropdown-item:hover {
   padding: 8px 0;
 }
 
-.mobile-login .btn {
+.btn {
   background-color: var(--primary-color);
   color: white;
   border: none;
@@ -2583,39 +2584,62 @@ header .dropdown-item:hover {
   cursor: pointer;
 }
 
-.mobile-login .btn:hover {
+.btn:hover {
   background-color: var(--secondary-color);
 }
 
-.mobile-login .terms {
+.terms {
   font-size: 12px;
   color: #666;
   margin-top: 20px;
   line-height: 1.4;
 }
 
-.mobile-login .terms a {
+.terms a {
   color: var(--primary-color);
   text-decoration: none;
 }
 
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
+/* OTP Step */
+.otp-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.otp-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.otp-inputs input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.resend {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.resend a {
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .auth-container {
+  .login_section {
+    padding: 0 10px;
+  }
+   .auth-container {
     flex-direction: column;
+    
   }
 
   .auth-container .welcome-panel {
@@ -2625,7 +2649,7 @@ header .dropdown-item:hover {
   }
 
   .auth-container .form-section {
-    padding: 30px;
+    padding: 30px 10px;
   }
 
   .mobile-login h2 {
@@ -2634,6 +2658,12 @@ header .dropdown-item:hover {
 
   .phone-input input {
     font-size: 13px;
+  }
+
+  .otp-inputs input {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
   }
 }
 
@@ -2761,24 +2791,39 @@ header .dropdown-item:hover {
 .dashbord_section .submenu {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
   background: #f7f7f7;
+  opacity: 0;
 }
 
 .dashbord_section .submenu.open {
-  max-height: 300px;
+    max-height: 300px; /* ya jitna dropdown ka total height ho */
+  opacity: 1;
 }
 
 .dashbord_section .submenu-item {
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 10px 45px;
   font-size: 15px;
   color: #333;
   text-decoration: none;
+  gap: 8px;
+}
+.dashbord_section .submenu-item input[type="radio"] {
+  accent-color: #8B2635;
+  transform: scale(1.1);
 }
 
 .dashbord_section .submenu-item:hover {
   background: #eaeaea;
+}
+.dashbord_section .arrow i {
+  transition: transform 0.35s ease-in-out;
+}
+
+.dashbord_section .arrow i.rotated {
+  transform: rotate(180deg);
 }
 
 /* Main Content */
@@ -2954,6 +2999,92 @@ header .dropdown-item:hover {
     display: block;
   }
 }
+
+
+/* ////// add team modal ////// */
+/* Modal Styles */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 600px;
+  max-width: 95%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #8B2635;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-submit {
+  background: #8B2635;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background: #ccc;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background: #6a1c29;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
 
 /* ======= dashbord page end ======= */
 

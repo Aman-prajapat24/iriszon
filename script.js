@@ -214,21 +214,37 @@ function toggleSidebar() {
 }
 
 // Sidebar submenu toggle
-function toggleSubmenu(el) {
-  const submenu = el.nextElementSibling;
-  const arrow = el.querySelector('.arrow i');
+function toggleSubmenu(element) {
+  const submenu = element.nextElementSibling;
+  const arrowIcon = element.querySelector(".arrow i");
 
-  document.querySelectorAll(".submenu").forEach(menu => {
-    if (menu !== submenu) menu.classList.remove("open");
-  });
-
-  document.querySelectorAll(".arrow i").forEach(icon => {
-    if (icon !== arrow) icon.classList.remove("rotated");
-  });
-
-  submenu.classList.toggle("open");
-  arrow.classList.toggle("rotated");
+  if (submenu.classList.contains("open")) {
+    submenu.style.maxHeight = null;
+    submenu.classList.remove("open");
+    arrowIcon.classList.remove("rotated");
+  } else {
+    submenu.style.maxHeight = submenu.scrollHeight + "px";
+    submenu.classList.add("open");
+    arrowIcon.classList.add("rotated");
+  }
 }
+
+//// add team modal ////
+function openAddTeamForm() {
+  document.getElementById("addTeamModal").style.display = "flex";
+}
+
+function closeAddTeamForm() {
+  document.getElementById("addTeamModal").style.display = "none";
+}
+
+// Close modal on outside click
+document.getElementById("addTeamModal").addEventListener("click", function(e) {
+  if (e.target === this) {
+    closeAddTeamForm();
+  }
+});
+
 
 // Accordion and product image switching
 function toggleAccordion(element) {
@@ -245,15 +261,7 @@ function changeImage(element) {
   element.classList.add('active');
 }
 
-// Sign-in/up switch inside modals
-function showSignUpForm() {
-  document.getElementById('signInForm').style.display = 'none';
-  document.getElementById('signUpForm').style.display = 'block';
-}
-function showSignInForm() {
-  document.getElementById('signInForm').style.display = 'block';
-  document.getElementById('signUpForm').style.display = 'none';
-}
+
 
 // Profile form submission
 document.getElementById("profileForm")?.addEventListener("submit", function (e) {
@@ -518,3 +526,17 @@ window.addEventListener("scroll", function () {
   });
 
 /* ======= View Shop Page end ======= */
+
+
+
+
+
+function goToOTP() {
+  let phone = document.getElementById("phoneNumber").value.trim();
+  if (phone.length < 5) {
+    alert("Please enter a valid phone number");
+    return;
+  }
+  document.getElementById("stepPhone").style.display = "none";
+  document.getElementById("stepOTP").style.display = "block";
+}

@@ -27,7 +27,7 @@
 
   <!-- ======= Login & sign up start ======= -->
 
-<section>
+<section class="login_section">
   <div class="auth-container">
 
     <!-- Welcome Panel -->
@@ -36,35 +36,52 @@
       <p>To keep connected with us please login with your personal info</p>
     </div>
 
-    <!-- Mobile Number Login Section -->
+    <!-- Right Side -->
     <div class="form-section">
       <div class="mobile-login">
-        <h2>Sign Up to view your profile</h2>
 
-        <label class="country-label">Country</label>
-        <div class="phone-input">
-          <select class="country-select">
-            <option value="+91">🇮🇳 India (+91)</option>
-            <option value="+1">🇺🇸 USA (+1)</option>
-            <option value="+44">🇬🇧 UK (+44)</option>
-            <option value="+61">🇦🇺 Australia (+61)</option>
-            <option value="+971">🇦🇪 UAE (+971)</option>
-          </select>
-          <input type="tel" placeholder="Phone Number">
+        <!-- Step 1: Mobile Number -->
+        <div id="stepPhone">
+          <h2>Sign Up to view your profile</h2>
+          <label class="country-label">Country</label>
+          <div class="phone-input">
+            <select class="country-select">
+              <option value="+91">🇮🇳 India (+91)</option>
+              <option value="+1">🇺🇸 USA (+1)</option>
+              <option value="+44">🇬🇧 UK (+44)</option>
+              <option value="+61">🇦🇺 Australia (+61)</option>
+              <option value="+971">🇦🇪 UAE (+971)</option>
+            </select>
+            <input type="tel" placeholder="Phone Number" id="phoneNumber">
+          </div>
+          <button class="btn" onclick="goToOTP()">Continue</button>
+          <p class="terms">
+            By continuing, you agree to Meesho’s 
+            <a href="#">Terms & Conditions</a> and 
+            <a href="#">Privacy Policy</a>
+          </p>
         </div>
 
-        <button class="btn">Continue</button>
+        <!-- Step 2: OTP Verification -->
+        <div id="stepOTP" style="display: none;">
+          <h2>Enter OTP</h2>
+          <p class="otp-text">We have sent an OTP to your number</p>
+          <div class="otp-inputs">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+            <input type="text" maxlength="1">
+          </div>
+          <button class="btn">Verify OTP</button>
+          <p class="resend">Didn’t receive the code? <a href="#">Resend</a></p>
+        </div>
 
-        <p class="terms">
-          By continuing, you agree to Meesho’s 
-          <a href="#">Terms & Conditions</a> and 
-          <a href="#">Privacy Policy</a>
-        </p>
       </div>
     </div>
 
   </div>
 </section>
+
 
 
 

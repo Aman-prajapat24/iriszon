@@ -31,17 +31,17 @@
     <div class="dashboard">
       <!-- Sidebar -->
       <div class="sidebar" id="sidebar">
-         <div class="sidebar-header">
-        <h2>Rohit</h2>
-        <p>rohit@gmail.com</p>
-        <a class="profile-link" href="profile.html">
-          <span class="icon"><i class="fas fa-user-circle"></i></span>
-          Profile
-        </a>
-        <button class="close-btn" onclick="toggleSidebar()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
+        <div class="sidebar-header">
+          <h2>Rohit</h2>
+          <p>rohit@gmail.com</p>
+          <a class="profile-link" href="profile.html">
+            <span class="icon"><i class="fas fa-user-circle"></i></span>
+            Profile
+          </a>
+          <button class="close-btn" onclick="toggleSidebar()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
         <nav>
           <div class="nav-section">
             <div class="nav-section-title">MAIN HOME</div>
@@ -59,10 +59,18 @@
                 Products
                 <span class="arrow"><i class="fas fa-chevron-down"></i></span>
               </a>
-              <div class="submenu">
-                <a class="submenu-item">Add Team</a>
-                <a class="submenu-item">View Team</a>
-              </div>
+             <div class="submenu">
+  <label class="submenu-item" onclick="openAddTeamForm()">
+    <input type="radio" name="products">
+    Add Team
+  </label>
+  <label class="submenu-item">
+    <input type="radio" name="products">
+    View Team
+  </label>
+</div>
+
+
             </div>
 
             <div class="nav-item">
@@ -72,9 +80,16 @@
                 <span class="arrow"><i class="fas fa-chevron-down"></i></span>
               </a>
               <div class="submenu">
-                <a class="submenu-item">Add Team</a>
-                <a class="submenu-item">View Team</a>
+                <label class="submenu-item">
+                  <input type="radio" name="products" checked>
+                  Add Team
+                </label>
+                <label class="submenu-item">
+                  <input type="radio" name="products">
+                  View Team
+                </label>
               </div>
+
             </div>
 
             <div class="nav-item">
@@ -84,12 +99,19 @@
                 <span class="arrow"><i class="fas fa-chevron-down"></i></span>
               </a>
               <div class="submenu">
-                <a class="submenu-item">Add Team</a>
-                <a class="submenu-item">View Team</a>
+                <label class="submenu-item">
+                  <input type="radio" name="products" checked>
+                  Add Team
+                </label>
+                <label class="submenu-item">
+                  <input type="radio" name="products">
+                  View Team
+                </label>
               </div>
+
             </div>
 
-            
+
             <div class="nav-item">
               <a class="nav-link" onclick="toggleSubmenu(this)">
                 <span class="icon"><i class="fas fa-warehouse"></i></span>
@@ -97,9 +119,16 @@
                 <span class="arrow"><i class="fas fa-chevron-down"></i></span>
               </a>
               <div class="submenu">
-                <a class="submenu-item">View Inventory</a>
-                <a class="submenu-item">Add Items</a>
+                <label class="submenu-item">
+                  <input type="radio" name="products" checked>
+                  Add Team
+                </label>
+                <label class="submenu-item">
+                  <input type="radio" name="products">
+                  View Team
+                </label>
               </div>
+
             </div>
 
             <div class="nav-item">
@@ -109,9 +138,16 @@
                 <span class="arrow"><i class="fas fa-chevron-down"></i></span>
               </a>
               <div class="submenu">
-                <a class="submenu-item">All Orders</a>
-                <a class="submenu-item">Pending Orders</a>
+                <label class="submenu-item">
+                  <input type="radio" name="products" checked>
+                  Add Team
+                </label>
+                <label class="submenu-item">
+                  <input type="radio" name="products">
+                  View Team
+                </label>
               </div>
+
             </div>
           </div>
           <div class="logout-section">
@@ -210,6 +246,69 @@
       </div>
     </div>
   </section>
+
+
+<!-- Add Team Modal -->
+<div class="modal-overlay" id="addTeamModal">
+  <div class="modal-content">
+    <h2>Add Team Member</h2>
+    <form id="addTeamForm">
+      
+      <!-- Row 1 -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" placeholder="Enter name" required>
+        </div>
+        <div class="form-group">
+          <label>Role</label>
+          <select required>
+            <option value="">Select role</option>
+            <option value="manager">Manager</option>
+            <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Department</label>
+          <select required>
+            <option value="">Select department</option>
+            <option value="sales">Sales</option>
+            <option value="it">IT</option>
+            <option value="hr">HR</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="text" placeholder="Enter phone" required>
+        </div>
+        <div class="form-group">
+          <label>Status</label>
+          <select required>
+            <option value="">Select status</option>
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-actions">
+        <button type="submit" class="btn-submit">Add Member</button>
+        <button type="button" class="btn-cancel" onclick="closeAddTeamForm()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 
 
 
