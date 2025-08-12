@@ -71,47 +71,34 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Main hero Swiper
- new Swiper(".mySwiper", {
-    loop: true,
-    speed: 1500,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
+// Hero Slider with smoother bottom-to-center animation
+const heroSwiper = new Swiper(".mySwiper", {
+  loop: true,
+  speed: 1500, // थोड़ा तेज किया
+  autoplay: {
+    delay: 3000, // slide delay कम
+    disableOnInteraction: false,
+  },
+  effect: "slide",
+  on: {
+    slideChangeTransitionStart: function () {
+      document.querySelectorAll(".mySwiper .slide-content").forEach((el) => {
+        el.style.opacity = "0";
+        el.style.transform = "translate(-50%, 20%)"; // थोड़ा ही नीचे
+      });
     },
-    effect: "slide",
-  });
-
-// Multiple sliders (Responsive config)
-const sliders = [
-  { selector: ".shop_by_categories", mobile: 3, tablet: 5, desktop: 7 },
-  { selector: ".HealthConcern", mobile: 3, tablet: 5, desktop: 7 },
-  { selector: ".Top-Rated-Product", mobile: 1, tablet: 3, desktop: 4 },
-  { selector: ".Best-Seller-Product", mobile: 1, tablet: 3, desktop: 4 },
-  { selector: ".Primary-Slider-Product", mobile: 1, tablet: 3, desktop: 4 },
-  { selector: ".Secondary-Slider-Product", mobile: 1, tablet: 3, desktop: 4 },
-];
-
-sliders.forEach((conf) => {
-  if (document.querySelector(conf.selector)) {
-    new Swiper(conf.selector, {
-      slidesPerView: conf.mobile,
-      spaceBetween: 20,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        320: { slidesPerView: conf.mobile, spaceBetween: 10 },
-        768: { slidesPerView: conf.tablet, spaceBetween: 15 },
-        1024: { slidesPerView: conf.desktop, spaceBetween: 20 },
-      },
-    });
-  }
+    slideChangeTransitionEnd: function () {
+      const activeSlide = document.querySelector(
+        ".mySwiper .swiper-slide-active .slide-content"
+      );
+      if (activeSlide) {
+        activeSlide.style.opacity = "1";
+        activeSlide.style.transform = "translate(-50%, -50%)"; // center
+      }
+    },
+  },
 });
+
 
 // Live search functionality
 function handleSearch(inputId, resultId, queryId) {

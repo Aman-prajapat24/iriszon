@@ -141,34 +141,9 @@ header .nav-link.active1 {
   font-weight: bold;
 }
 
-header .dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 18px;
-}
 
-header .dropdown-toggle {
-  text-decoration: none;
-  color: #000;
-}
 
-header .dropdown-toggle::after {
-  display: none;
-}
 
-header .dropdown-menu {
-  position: absolute;
-  inset: 0px auto auto 0px;
-  margin: 0px;
-  transform: translate3d(4px, 24.6667px, 0px);
-  top: 5px !important;
-  left: -2rem !important;
-  width: 100%;
-}
-
-header .dropdown-menu li {
-  text-align: center;
-  color: var(--primary-color);
-}
 
 header nav {
   position: fixed;
@@ -423,112 +398,7 @@ header .dropdown-item:hover {
 
 
 /* ====End Header Section===== */
-/* ====Start Login & Sign Up Modal Section===== */
-/* Modal Styling */
-header .modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-  z-index: 100000;
-}
 
-/* Login Modal */
-header .login-modal .modal-content {
-  background: #ffffff;
-  border: 2px solid #007bff;
-  color: #333;
-}
-
-/* Signup Modal */
-header .signup-modal .modal-content {
-  background: #f9f9f9;
-  border: 2px solid #28a745;
-  color: #333;
-}
-
-/* Modal content */
-header .modal-content {
-  padding: 30px;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  position: relative;
-  animation: fadeIn 0.5s;
-}
-
-/* Close button */
-header .close-btn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 24px;
-  color: #555;
-  cursor: pointer;
-}
-
-header .close-btn:hover {
-  color: red;
-}
-
-/* Form Styling */
-header form {
-  display: flex;
-  flex-direction: column;
-}
-
-header form label {
-  margin: 10px 0 5px;
-}
-
-header form input {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-header .btn {
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-header .login-btn {
-  background: var(--primary-color) !important;
-  color: #fff !important;
-}
-
-header .signup-btn {
-  background: #28a745 !important;
-  color: #fff !important;
-}
-
-header .btn:hover {
-  opacity: 0.9;
-}
-
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 
 /* ===== Desktop Icons Count ===== */
 @media (min-width: 992px) {
@@ -746,7 +616,6 @@ header .btn:hover {
 
 
 /* =====Hero Section Start====== */
-
 .home_section {
   padding-top: 115px;
 }
@@ -784,8 +653,7 @@ header .btn:hover {
 }
 
 .swiper-slide-active .slide-image {
-  transform: scale(1.08);
-  /* Zoom effect */
+  transform: scale(1.08); /* Zoom effect */
 }
 
 .hero-img-overlay {
@@ -798,22 +666,23 @@ header .btn:hover {
   z-index: 1;
 }
 
+/* ✅ Desktop & Tablet: Content center */
 .slide-content {
   position: absolute;
-  top: 20%;
-  left: 5%;
+  top: 50%;
+  left: 50%;
   max-width: 50%;
   color: #fff;
   z-index: 2;
-  text-align: left;
+  text-align: center;
+ transition: transform 0.7s ease-out, opacity 0.7s ease-out; /* smooth */
+  transform: translate(-50%, 20%); /* नीचे से start */
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1.2s ease, transform 1.2s ease;
 }
 
 .swiper-slide-active .slide-content {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(-50%, -50%);
 }
 
 .slide-content h1 {
@@ -839,13 +708,15 @@ header .btn:hover {
 }
 
 .service-btn {
-  color: #fff;
+  color: var(--primary-color);
   border: 2px solid #fff;
   background: none;
 }
 
 .service-btn:hover {
-  color: var(--primary-color);
+  background: var(--primary-color);
+  color: #fff;
+  border: var(--primary-color);
 }
 
 .quote-btn {
@@ -855,11 +726,12 @@ header .btn:hover {
 }
 
 .quote-btn:hover {
-  background: var(--secondary-color);
-  color: #fff;
+  color: var(--primary-color);
+  border: 2px solid #fff;
+  background: none;
 }
 
-
+/* ✅ Tablet adjustments */
 @media (max-width: 991px) {
   .home_section {
     padding-top: 70px;
@@ -868,7 +740,6 @@ header .btn:hover {
 
 /* ✅ Mobile responsive adjustments */
 @media (max-width: 768px) {
-
   .home_section {
     padding-top: 70px;
   }
@@ -883,9 +754,8 @@ header .btn:hover {
   }
 
   .slide-content {
-    top: 10%;
-    left: 5%;
     max-width: 90%;
+    text-align: center;
   }
 
   .slide-content h1 {
@@ -895,21 +765,45 @@ header .btn:hover {
 
   .slide-content p {
     font-size: 0.9rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
-  .service-btn,
-  .quote-btn {
-    padding: 10px 18px;
+  .slide-content .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .slide-content .btn-group a {
+    padding: 10px 20px;
     font-size: 12px;
+    font-weight: 700;
+    border-radius: 25px;
+    white-space: nowrap;
   }
 }
+
+/* ✅ Extra small devices (max 320px) */
+@media (max-width: 320px) {
+  .slide-content h1 {
+    font-size: 1.2rem;
+  }
+  .slide-content p {
+    font-size: 0.8rem;
+  }
+  .slide-content .btn-group a {
+    padding: 8px 14px;
+    font-size: 11px;
+  }
+}
+
+
 
 /* =====Hero Section End====== */
 
 
 /* ====== customer services section start ======= */
-
 .site-features {
   padding: 50px 0;
 }
@@ -920,35 +814,48 @@ header .btn:hover {
   justify-content: space-between;
   padding: 0px 40px;
   width: 100%;
+  gap: 20px; /* Gap between boxes */
 }
 
 .block--site-features .block__item {
   display: flex;
-  align-items: center;
-  padding: 10px 30px;
-  border-right: 1px solid #dadada;
-  width: 25%;
+  flex-direction: column; /* Icon over text */
+  align-items: center; /* Horizontal center */
+  justify-content: center; /* Vertical center */
+  text-align: center; /* Text center align */
+  padding: 20px;
+  flex: 1 1 calc(25% - 20px); /* 4 per row with gap */
   box-sizing: border-box;
+  background: #fff;
+  border-radius: 10px;
+
+  /* Premium shadow */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06), 
+              0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.block--site-features .block__item:last-child {
-  border-right: none;
+.block--site-features .block__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10), 
+              0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
 .block--site-features .block__left img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
+  margin-bottom: 10px; /* Space between icon & text */
 }
 
 .block--site-features .block__right {
-  padding-left: 25px;
+  padding-left: 0; /* No side gap */
 }
 
 .block--site-features .block__right h4 {
   font-size: 18px;
   font-weight: 500;
-  margin: 0;
+  margin: 0 0 5px;
   color: #000;
 }
 
@@ -957,41 +864,25 @@ header .btn:hover {
   color: #666;
 }
 
-/* ✅ Tablet (768px – 1024px): center aligned, 2 per row */
+/* Tablet (768px – 1024px) */
 @media (max-width: 1024px) {
   .site-features {
     padding: 20px 0;
   }
 
   .block--site-features {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    /* center the items */
     padding: 20px 0;
+    gap: 20px;
   }
 
   .block--site-features .block__item {
-    width: 45%;
-    /* make room for margin between two items */
-    margin: 2.5%;
-    /* to keep spacing equal */
-    border-right: none;
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px 15px;
-    box-sizing: border-box;
-  }
-
-  .block--site-features .block__right {
-    padding-left: 20px;
-    text-align: left;
+    flex: 1 1 calc(45% - 20px); /* 2 per row */
   }
 }
 
-/* ✅ Mobile (≤ 767px): fully center aligned, 1 column */
+/* Mobile (≤ 767px) */
 @media (max-width: 767px) {
-
   .site-features {
     padding: 20px 0;
   }
@@ -999,31 +890,17 @@ header .btn:hover {
   .block--site-features {
     flex-direction: column;
     align-items: center;
-
+    gap: 20px;
   }
 
   .block--site-features .block__item {
     width: 100%;
     max-width: 350px;
-    margin-bottom: 20px;
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px 0;
-    border-right: none;
-  }
-
-  .block--site-features .block__left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 50px;
-  }
-
-  .block--site-features .block__right {
-    padding-left: 15px;
-    text-align: left;
+    transform: none !important; /* Stop shake */
+    transition: box-shadow 0.25s ease;
   }
 }
+
 
 /* ======= customer services section end ======= */
 

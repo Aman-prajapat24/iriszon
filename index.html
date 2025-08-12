@@ -53,24 +53,20 @@
 
               <!-- Supplier Button -->
               <div>
-                <button class="seller_button">Become a Supplier</button>
+                <a href="become.html"> <button class="seller_button">Become a Supplier</button></a>
               </div>
 
               <!-- Icons -->
               <div class="d-flex align-items-center gap-4">
                 <!-- User -->
-                <div class="text-center">
+                <a href="login.html">
+                  <div class="text-center">
                   <div class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fas fa-user fa-lg"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#" id="openLogin">Login</a></li>
-                      <li><a class="dropdown-item" href="#" id="openSignup">Signup</a></li>
-                    </ul>
+                    <i class="fas fa-user fa-lg"></i>
+                    <p class="mb-0">Profile</p>
                   </div>
-                  <p class="mb-0">User</p>
                 </div>
+                </a>
 
                 <!-- Wishlist -->
                 <div class="text-center position-relative">
@@ -83,11 +79,13 @@
 
                 <!-- Bag -->
                 <div class="text-center position-relative">
-                  <div class="bag_icon">
-                    <i class="fas fa-shopping-bag fa-lg"></i>
-                    <div class="count_bag">1</div>
-                  </div>
-                  <p class="mb-0">Bag</p>
+                  <a href="cart.html">
+                    <div class="bag_icon">
+                      <i class="fas fa-shopping-bag fa-lg"></i>
+                      <div class="count_bag">1</div>
+                      <p class="mb-0">Bag</p>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -331,7 +329,7 @@
             </a>
           </li>
           <li class="nav__item">
-            <a href="#Profile" class="nav__item-link">
+            <a href="login.html" class="nav__item-link">
               <div class="nav__item-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
                   fill="none">
@@ -362,7 +360,7 @@
             </a>
           </li>
           <li class="nav__item">
-            <a href="#Help" class="nav__item-link">
+            <a href="cart.html" class="nav__item-link">
               <div class="nav__item-icon">
                 <div class="bag_icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
@@ -443,8 +441,11 @@
                 <p>
                   We deliver top-notch solutions to help you succeed in your goals.
                 </p>
-                <a href="#" class="service-btn">Our Services</a>
-                <a href="#" class="quote-btn">Get Free Quote</a>
+                <div class="btn-group">
+                  <a href="#" class="service-btn">OUR SERVICES</a>
+                  <a href="#" class="quote-btn">GET FREE QUOTE</a>
+                </div>
+
               </div>
             </div>
           </div>
@@ -458,8 +459,11 @@
                 <p>
                   Empowering your business with creative technology & marketing.
                 </p>
-                <a href="#" class="service-btn">Our Services</a>
-                <a href="#" class="quote-btn">Get Free Quote</a>
+                <div class="btn-group">
+                  <a href="#" class="service-btn">OUR SERVICES</a>
+                  <a href="#" class="quote-btn">GET FREE QUOTE</a>
+                </div>
+
               </div>
             </div>
           </div>
@@ -491,7 +495,7 @@
             <img src="assets/icons/return.png" alt="90 Days Return">
           </div>
           <div class="block__right">
-            <h4>90 Days Return</h4>
+            <h4>7 Days Return</h4>
             <p>If goods have problems</p>
           </div>
         </div>
@@ -1256,7 +1260,7 @@
 
 
   <!-- ===Footer-Section-Start=== -->
-   
+
   <footer class="footer-section">
     <div class="container">
       <div class="row">
