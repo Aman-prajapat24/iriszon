@@ -229,21 +229,6 @@ function toggleSubmenu(element) {
   }
 }
 
-//// add team modal ////
-function openAddTeamForm() {
-  document.getElementById("addTeamModal").style.display = "flex";
-}
-
-function closeAddTeamForm() {
-  document.getElementById("addTeamModal").style.display = "none";
-}
-
-// Close modal on outside click
-document.getElementById("addTeamModal").addEventListener("click", function(e) {
-  if (e.target === this) {
-    closeAddTeamForm();
-  }
-});
 
 
 // Accordion and product image switching
@@ -540,3 +525,11 @@ function goToOTP() {
   document.getElementById("stepPhone").style.display = "none";
   document.getElementById("stepOTP").style.display = "block";
 }
+
+
+
+//// become login start///
+
+
+
+//// become login end///
