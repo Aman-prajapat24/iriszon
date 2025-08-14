@@ -94,7 +94,7 @@ header .header_icons p {
 }
 
 /* Supplier Button  */
-.web-header .seller_button {
+.seller_button {
   background-color: #90201f;
   border: none;
   font-weight: 600;
@@ -1304,8 +1304,7 @@ header .dropdown-item:hover {
   background-color: #eee;
 }
 
-.f-box,
-.footer-section .map {
+.f-box, .footer-section .map {
   margin-top: 20px;
 }
 
@@ -1342,6 +1341,7 @@ header .dropdown-item:hover {
   align-items: center;
   font-weight: 600;
   margin: 10px 0px;
+  line-height: 1.4;
 }
 
 .f-box ul li a span {
@@ -1357,7 +1357,7 @@ header .dropdown-item:hover {
 }
 
 .f-box img {
-  width: 120px;
+  width: 80px;
 }
 
 .f-box .social-link {
@@ -1365,8 +1365,7 @@ header .dropdown-item:hover {
   align-items: center;
 }
 
-.f-box .social-link li a,
-.f-box ul li>i {
+.f-box .social-link li a, .f-box ul li>i {
   display: flex;
   margin-right: 10px;
   align-items: center;
@@ -1377,10 +1376,10 @@ header .dropdown-item:hover {
   background-color: #fff;
   color: var(--primary-color);
   border-radius: 1px;
+  flex-shrink: 0;
 }
 
-.f-box .social-link li a:hover,
-.f-box ul li>i:hover {
+.f-box .social-link li a:hover, .f-box ul li>i:hover {
   background-color: var(--secondary-color);
   color: #fff;
   border-radius: 5px;
@@ -1406,15 +1405,80 @@ header .dropdown-item:hover {
   position: relative;
 }
 
-
 .footer-section .copy-right p {
   margin-bottom: 0;
+  letter-spacing: 1px;
 }
 
 .footer-section .copy-right p a {
   color: #000;
   font-weight: 600;
 }
+
+@media (max-width: 768px){
+  .copy-right {
+    margin-bottom: 90px;
+  }
+}
+/* Mobile Responsive Styles - Max-width 425px */
+@media screen and (max-width: 425px) {
+  .footer-section {
+    padding-top: 20px;
+    margin-bottom: 90px;
+  }
+  
+  .footer-section .container {
+    padding: 0 15px;
+  }
+  
+  .f-box {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .f-box h4 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .f-box h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .f-box p {
+    text-align: center;
+    font-size: 16px;
+    margin: 15px 0;
+  }
+  
+  
+  .f-box .social-link {
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  .f-box .social-link li {
+    margin: 0 5px;
+  }
+  
+  .f-box img {
+    width: 70px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .footer-section .copy-right {
+    padding: 12px 15px;
+  }
+  
+  .footer-section .copy-right p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+
 
 /* ---Footer-Section-End--- */
 
@@ -3979,7 +4043,7 @@ header .dropdown-item:hover {
   min-height: 100vh;
 }
 
-.container {
+.signup-section .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 15px;
@@ -4012,12 +4076,12 @@ header .dropdown-item:hover {
   align-items: flex-start;
 }
 
-.signup-content {
+.signup-section .signup-content {
   padding-left: 50px;
 }
 
 /* Info box */
-.info-box {
+.signup-section .info-box {
   flex: 1;
   max-width: 480px;
   background: transparent;
@@ -4025,31 +4089,31 @@ header .dropdown-item:hover {
 }
 
 /* Signup box */
-.signup-box {
+.signup-section .signup-box {
   flex: 1;
   max-width: 400px;
 }
 
-.signup-box h3 {
+.signup-section .signup-box h3 {
   font-size: 18px;
   margin-bottom: 8px;
   font-weight: bold;
   padding-top: 20px;
 }
 
-.signup-box p {
+.signup-section .signup-box p {
   color: #666;
   font-size: 15px;
   margin-bottom: 20px;
 }
 
 /* Floating label inputs */
-.input-group {
+.signup-section .input-group {
   position: relative;
   margin-bottom: 15px;
 }
 
-.input-group input {
+.signup-section .input-group input {
   width: 100%;
   padding: 12px 10px;
   border: 1px solid #ccc;
@@ -4060,13 +4124,13 @@ header .dropdown-item:hover {
 }
 
 /* OTP Row */
-.otp-row {
+.signup-section .otp-row {
   display: flex;
   gap: 10px;
   margin-top: 60px;
 }
 
-.send-otp-btn {
+.signup-section .send-otp-btn {
   background: var(--primary-color);
   color: #fff;
   padding: 0 20px;
@@ -4083,14 +4147,14 @@ header .dropdown-item:hover {
 }
 
 /* Checkbox */
-.checkbox {
+.signup-section .checkbox {
   margin-top: 60px;
   margin-bottom: 15px;
   font-size: 14px;
 }
 
 /* Create Account Button */
-.create-account-btn {
+.signup-section .create-account-btn {
   background: var(--primary-color);
   color: #fff;
   width: 100%;
@@ -4103,13 +4167,13 @@ header .dropdown-item:hover {
 }
 
 /* Login link */
-.login-link-bottom {
+.signup-section .login-link-bottom {
   margin-top: 15px;
   font-size: 14px;
   text-align: center;
 }
 
-.login-link-bottom a {
+.signup-section .login-link-bottom a {
   color: var(--primary-color);
   font-weight: bold;
   text-decoration: none;
@@ -4118,24 +4182,24 @@ header .dropdown-item:hover {
 }
 
 /* Terms */
-.terms {
+.signup-section .terms {
   font-size: 12px;
   color: #666;
   margin-top: 40px;
 }
 
-.terms a {
+.signup-section .terms a {
   color: var(--primary-color);
 }
 
 /* Info Box Titles */
-.info-title {
+.signup-section .info-title {
   font-size: 18px;
   margin-bottom: 20px;
   font-weight: bold;
 }
 
-.stats-grid {
+.signup-section .stats-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
@@ -4143,48 +4207,48 @@ header .dropdown-item:hover {
   margin-top: 50px;
 }
 
-.stat-item {
+.signup-section .stat-item {
   display: flex;
   align-items: flex-start;
   gap: 20px;
 }
 
-.stat-item i {
+.signup-section .stat-item i {
   font-size: 24px;
   color: var(--primary-color);
 }
 
-.stat-item h4 {
+.signup-section .stat-item h4 {
   font-size: 16px;
   font-weight: 600;
   margin: 0;
 }
 
-.stat-item p {
+.signup-section .stat-item p {
   font-size: 12px;
   color: #666;
   margin-top: 5px;
 }
 
-.info-box hr {
+.signup-section .info-box hr {
   border: none;
   border-top: 1px solid #000;
   margin: 20px 0;
 }
 
-.requirements-title {
+.signup-section .requirements-title {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-.requirements {
+.signup-section .requirements {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.requirements>li {
+.signup-section .requirements>li {
   font-size: 14px;
   margin-bottom: 8px;
   display: flex;
@@ -4192,12 +4256,12 @@ header .dropdown-item:hover {
   gap: 8px;
 }
 
-.nested-requirements {
+.signup-section .nested-requirements {
   padding-left: 20px;
   margin-top: -4px;
 }
 
-.nested-requirements li {
+.signup-section .nested-requirements li {
   font-size: 14px;
   margin-top: 10px;
   margin-bottom: 8px;
@@ -4206,11 +4270,11 @@ header .dropdown-item:hover {
   gap: 8px;
 }
 
-.requirements i {
+.signup-section .requirements i {
   color: var(--primary-color);
 }
 
-.badge {
+.signup-section .badge {
   font-size: 10px;
   padding: 3px 6px;
   border-radius: 4px;
@@ -4218,28 +4282,28 @@ header .dropdown-item:hover {
   transition: all 0.5s ease;
 }
 
-.badge.blue {
+.signup-section .badge.blue {
   background: #e6f2ff;
   color: #0073e6;
 }
 
-.badge.pink {
+.signup-section .badge.pink {
   background: #ffe6ee;
   color: var(--primary-color);
   animation: blink 2s infinite;
 }
 
-.badge.gray {
+.signup-section .badge.gray {
   background: #f0f0f0;
   color: #666;
 }
 
-.checked {
+.signup-section .checked {
   color: #a0c4ff;
   font-size: 18px;
 }
 
-.unchecked {
+.signup-section .unchecked {
   color: #d3d3d3;
   font-size: 18px;
 }
@@ -4275,12 +4339,12 @@ header .dropdown-item:hover {
     padding: 25px;
   }
 
-  .signup-box,
-  .info-box {
+  .signup-section .signup-box,
+  .signup-section .info-box {
     max-width: 100%;
   }
 
-  .stats-grid {
+  .signup-section .stats-grid {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
@@ -4307,30 +4371,30 @@ header .dropdown-item:hover {
     justify-content: center;
   }
 
-  .signup-box,
-  .info-box {
+  .signup-section .signup-box,
+  .signup-section .info-box {
     max-width: 100%;
     text-align: center;
   }
 
-  .otp-row {
+  .signup-section .otp-row {
     flex-direction: column;
     gap: 12px;
     margin-top: 20px;
   }
 
-  .send-otp-btn {
+  .signup-section .send-otp-btn {
     width: 100%;
     height: 45px;
     margin-bottom: 30px;
   }
 
-  .stats-grid {
+  .signup-section .stats-grid {
     grid-template-columns: 1fr;
     justify-items: center;
   }
 
-  .stats-grid .stat-item {
+  .signup-section .stats-grid .stat-item {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -4343,7 +4407,7 @@ header .dropdown-item:hover {
     width: 100%;
   }
 
-  .stats-grid .stat-item i {
+  .signup-section .stats-grid .stat-item i {
     font-size: 28px;
     color: var(--primary-color);
     background: rgba(0, 123, 255, 0.1);
@@ -4351,37 +4415,34 @@ header .dropdown-item:hover {
     border-radius: 50%;
   }
 
-  .signup-box h3,
-  .info-title {
+  .signup-section .signup-box h3,
+  .signup-section .info-title {
     font-size: 18px;
   }
 
-  .signup-box p,
-  .stat-item p {
+  .signup-section .signup-box p,
+  .signup-section .stat-item p {
     font-size: 13px;
   }
 
-  .create-account-btn {
+  .signup-section .create-account-btn {
     font-size: 14px;
     padding: 10px;
   }
 
-  .login-link-bottom {
+  .signup-section .login-link-bottom {
     font-size: 13px;
   }
 
-  .terms {
+  .signup-section .terms {
     text-align: center;
     font-size: 11px;
   }
 
-  .signup-content {
+  .signup-section .signup-content {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
-
-
-
 
 /* /////// become login end ////// */
