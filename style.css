@@ -1206,7 +1206,7 @@ header .dropdown-item:hover {
 
   .cards_section .product-image {
     height: 200px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
 
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -4121,6 +4121,21 @@ header .dropdown-item:hover {
     margin: 0 auto 6px; /* center align */
     display: block;
     border-radius: 4px;
+  }
+  .view_shop .product-card .add-to-cart {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 4px 6px; /* thoda kam height */
+    font-size: 10px; /* thoda chhota font */
+    font-weight: 500;
+    width: auto; /* width text ke according */
+    min-width: 80px; /* minimum width fix */
+    margin: 0 auto 6px; /* center align */
+    display: block;
+    border-radius: 4px;
+    white-space: nowrap; /* text ek hi line me */
+    text-align: center;
   }
 }
 
