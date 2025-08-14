@@ -2415,15 +2415,43 @@ header .dropdown-item:hover {
 }
 
 /* Responsive Styles */
-@media (max-width: 1024px) {
-  .products_details {
-    margin-top: 150px;
+
+/* Large Desktop - 1024px and up */
+@media (min-width: 1025px) {
+  .products_details .image-gallery {
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .products_details .action-buttons {
+    width: 280px;
+    justify-content: center;
   }
 }
 
-@media (max-width: 768px) {
+/* Tablet - 769px to 1024px */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .products_details {
+    margin-top: 150px;
+  }
+  
+  .products_details .image-gallery {
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
+
+/* Tablet Portrait - 426px to 768px */
+@media (max-width: 768px) and (min-width: 426px) {
   .products_details {
     margin-top: 40px;
+    padding: 40px 15px;
   }
 
   .products_details .product-top-section {
@@ -2440,14 +2468,12 @@ header .dropdown-item:hover {
     justify-content: center;
   }
 
-  /* Fixed size main image on mobile */
   .products_details .main-image img {
     width: 300px;
     height: 400px;
     object-fit: cover;
   }
 
-  /* Buttons fixed width on mobile */
   .products_details .action-buttons {
     width: 300px;
     justify-content: space-between;
@@ -2460,31 +2486,71 @@ header .dropdown-item:hover {
     padding: 10px;
   }
 
-  /* Equal space left & right on mobile */
   .products_details .product-box {
     width: 90%;
     margin: 0 auto;
   }
-}
 
-/* Desktop Enhancements */
-@media (min-width: 769px) {
-  .products_details .image-gallery {
-    position: sticky;
-    top: 100px;
-    align-self: flex-start;
-    max-height: 90vh;
-    overflow-y: auto;
+  .products_details .seller-box {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .products_details .action-buttons {
-    width: 280px;
+  .products_details .view-shop-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Mobile - max-width 425px */
+@media (max-width: 425px) {
+  .products_details {
+    margin-top: 40px;
+    padding: 40px 15px; /* Same padding as cards section */
+  }
+
+  .products_details .product-top-section {
+    flex-direction: column;
+  }
+
+  .products_details .image-gallery {
+    flex-direction: column;
+    align-items: center;
+    margin: 0; /* Remove any margin to align with cards */
+  }
+
+  .products_details .product-thumbnails {
+    flex-direction: row;
     justify-content: center;
   }
-}
 
-/* Seller box mobile adjustments */
-@media (max-width: 600px) {
+  /* Fixed size main image on mobile */
+  .products_details .main-image img {
+    width: 280px;
+    height: 380px;
+    object-fit: cover;
+  }
+
+  /* Buttons fixed width on mobile */
+  .products_details .action-buttons {
+    width: 280px;
+    justify-content: space-between;
+  }
+
+  .products_details .action-buttons button {
+    flex: none;
+    width: 135px;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Align product box with cards container */
+  .products_details .product-box {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* Mobile seller box adjustments */
   .products_details .seller-box {
     flex-direction: column;
     align-items: flex-start;
@@ -2577,30 +2643,36 @@ header .dropdown-item:hover {
   margin-right: 6px;
 }
 
-/* Desktop - 4 items per row */
-@media (min-width: 993px) {
+/* Desktop - 4 items per row (1025px and up) */
+@media (min-width: 1025px) {
   .products_cards .card {
     flex: 1 1 calc(25% - 20px);
   }
 }
 
-/* Tablet - 2 items per row */
-@media (min-width: 768px) and (max-width: 992px) {
+/* Tablet - 2 items per row (769px to 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
   .products_cards .card {
     flex: 1 1 calc(50% - 20px);
   }
 }
 
-/* Mobile - 1 item per row + equal padding for top section */
+/* Tablet Portrait - 2 items per row (426px to 768px) */
+@media (max-width: 768px) and (min-width: 426px) {
+  .products_cards .card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+/* Mobile - 1 item per row (max-width 425px) */
 @media (max-width: 425px) {
   .products_cards .card {
     flex: 1 1 100%;
   }
-  .products_details {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
   
+  .products_cards .container {
+    padding: 20px 15px; /* Same padding as details section */
+  }
 }
 
 /* ======== products details section end ======== */
