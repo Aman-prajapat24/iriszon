@@ -3,11 +3,7 @@
 }
 
 
-a {
-  color: #000;
-  text-decoration: none !important;
-  outline: none;
-}
+
 
 
 ul li {
@@ -131,7 +127,11 @@ header .nav-link {
   font-weight: 500;
 
 }
-
+header a {
+  color: #000;
+  text-decoration: none !important;
+  outline: none;
+}
 header .nav-link:hover {
   color: #5a459c;
 }
@@ -1240,6 +1240,14 @@ header .dropdown-item:hover {
     padding-right: 12px;
   }
 }
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.product-link .product-card {
+  transition: all 0.3s ease;
+}
 
 
 /* ====== Top rated products end ======= */
@@ -1303,7 +1311,11 @@ header .dropdown-item:hover {
   font-weight: 600;
   background-color: #eee;
 }
-
+.footer-section a {
+  color: #000;
+  text-decoration: none !important;
+  outline: none;
+}
 .f-box, .footer-section .map {
   margin-top: 20px;
 }
@@ -2176,6 +2188,9 @@ header .dropdown-item:hover {
 .products_details {
   padding: 40px 20px;
 }
+.products_details {
+  margin-top: 100px;
+}
 
 .products_details .product-container {
   display: flex;
@@ -2352,6 +2367,12 @@ header .dropdown-item:hover {
 
 
 /* Responsive Styles */
+@media (max-width: 1024px){
+  .products_details {
+  margin-top: 150px;
+}
+}
+
 @media (max-width: 768px) {
   .products_details .product-top-section {
     flex-direction: column;
@@ -2380,6 +2401,9 @@ header .dropdown-item:hover {
     padding: 14px;
     font-size: 16px;
   }
+  .products_details {
+  margin-top: 40px;
+}
 }
 
 /* Desktop Enhancements */
@@ -2459,6 +2483,9 @@ header .dropdown-item:hover {
     width: 100%;
     text-align: center;
   }
+  .products_details {
+  margin-top: 40px;
+}
 }
 
 
@@ -2576,7 +2603,7 @@ header .dropdown-item:hover {
 
 
 
-.auth-container {
+.login_section .auth-container {
   display: flex;
   width: 100%;
   max-width: 900px;
@@ -2589,7 +2616,7 @@ header .dropdown-item:hover {
 }
 
 /* Left Panel */
-.auth-container .welcome-panel {
+.login_section .auth-container .welcome-panel {
   flex: 1;
   background: linear-gradient(135deg, #90201f, #bf2113);
   color: white;
@@ -2601,19 +2628,19 @@ header .dropdown-item:hover {
   text-align: center;
 }
 
-.auth-container .welcome-panel h2 {
+.login_section .auth-container .welcome-panel h2 {
   font-size: 28px;
   margin-bottom: 15px;
 }
 
-.auth-container .welcome-panel p {
+.login_section .auth-container .welcome-panel p {
   font-size: 16px;
   margin-bottom: 30px;
   max-width: 250px;
 }
 
 /* Right Panel */
-.auth-container .form-section {
+.login_section .auth-container .form-section {
   flex: 1;
   padding: 40px;
   display: flex;
@@ -2621,18 +2648,18 @@ header .dropdown-item:hover {
   justify-content: center;
 }
 
-.mobile-login {
+.login_section .mobile-login {
   max-width: 350px;
   margin: auto;
   text-align: center;
 }
 
-.mobile-login h2 {
+.login_section .mobile-login h2 {
   font-size: 20px;
   margin-bottom: 20px;
 }
 
-.country-label {
+.login_section .country-label {
   display: block;
   text-align: left;
   font-size: 12px;
@@ -2640,7 +2667,7 @@ header .dropdown-item:hover {
   margin-bottom: 4px;
 }
 
-.phone-input {
+.login_section .phone-input {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ccc;
@@ -2648,7 +2675,7 @@ header .dropdown-item:hover {
   padding-bottom: 5px;
 }
 
-.country-select {
+.login_section .country-select {
   border: none;
   outline: none;
   font-size: 14px;
@@ -2658,7 +2685,7 @@ header .dropdown-item:hover {
   width: 140px;
 }
 
-.phone-input input {
+.login_section .phone-input input {
   border: none;
   outline: none;
   flex: 1;
@@ -2666,7 +2693,7 @@ header .dropdown-item:hover {
   padding: 8px 0;
 }
 
-.btn {
+.login_section .btn {
   background-color: var(--primary-color);
   color: white;
   border: none;
@@ -2678,36 +2705,36 @@ header .dropdown-item:hover {
   cursor: pointer;
 }
 
-.btn:hover {
+.login_section .btn:hover {
   background-color: var(--secondary-color);
 }
 
-.terms {
+.login_section .terms {
   font-size: 12px;
   color: #666;
   margin-top: 20px;
   line-height: 1.4;
 }
 
-.terms a {
+.login_section .terms a {
   color: var(--primary-color);
   text-decoration: none;
 }
 
 /* OTP Step */
-.otp-text {
+.login_section .otp-text {
   font-size: 14px;
   color: #555;
   margin-bottom: 15px;
 }
 
-.otp-inputs {
+.login_section .otp-inputs {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.otp-inputs input {
+.login_section .otp-inputs input {
   width: 50px;
   height: 50px;
   text-align: center;
@@ -2716,12 +2743,12 @@ header .dropdown-item:hover {
   border-radius: 6px;
 }
 
-.resend {
+.login_section .resend {
   font-size: 12px;
   margin-top: 10px;
 }
 
-.resend a {
+.login_section .resend a {
   color: var(--primary-color);
   text-decoration: none;
 }
@@ -2732,30 +2759,30 @@ header .dropdown-item:hover {
     padding: 0 10px;
   }
 
-  .auth-container {
+  .login_section .auth-container {
     flex-direction: column;
 
   }
 
-  .auth-container .welcome-panel {
+  .login_section .auth-container .welcome-panel {
     width: 100%;
     padding: 20px;
     border-bottom: 1px solid #ccc;
   }
 
-  .auth-container .form-section {
+  .login_section .auth-container .form-section {
     padding: 30px 10px;
   }
 
-  .mobile-login h2 {
+  .login_section .mobile-login h2 {
     font-size: 18px;
   }
 
-  .phone-input input {
+  .login_section .phone-input input {
     font-size: 13px;
   }
 
-  .otp-inputs input {
+  .login_section .otp-inputs input {
     width: 40px;
     height: 40px;
     font-size: 16px;
@@ -3818,7 +3845,9 @@ header .dropdown-item:hover {
 .gy-3 {
   --bs-gutter-y: 0rem;
 }
-
+.view_shop .card-body .dropdown button {
+  color: #000;
+}
 
 @media (max-width: 425px) {
 

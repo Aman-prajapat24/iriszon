@@ -20,9 +20,9 @@
 
 <body>
 
-  <header>
+ <header>
     <!--======Start Web Header ====== -->
-    <div class="shadow-lg sticky-top bg-white d-none d-lg-block">
+    <div class="shadow-lg fixed-top bg-white d-none d-lg-block" style="z-index: 1050;">
       <div class="container-fluid px-0">
         <div class="web-header">
           <div class="container-fluid">
@@ -42,26 +42,30 @@
                 </div>
               </div>
 
+              <div class="product-suggestion-box d-none" id="searchSuggestions">
+                <p>Showing results for '<span id="searchKeyword" class="text-success"></span>'</p>
+                <table id="suggestionTable">
+                  <!-- JS will insert rows here -->
+                </table>
+              </div>
+
+
               <!-- Supplier Button -->
               <div>
-                <button class="seller_button">Become a Supplier</button>
+                <a href="become.html"> <button class="seller_button">Become a Supplier</button></a>
               </div>
 
               <!-- Icons -->
               <div class="d-flex align-items-center gap-4">
                 <!-- User -->
-                <div class="text-center">
-                  <div class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="login.html">
+                  <div class="text-center">
+                    <div class="dropdown">
                       <i class="fas fa-user fa-lg"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#" id="openLogin">Login</a></li>
-                      <li><a class="dropdown-item" href="#" id="openSignup">Signup</a></li>
-                    </ul>
+                      <p class="mb-0">Profile</p>
+                    </div>
                   </div>
-                  <p class="mb-0">User</p>
-                </div>
+                </a>
 
                 <!-- Wishlist -->
                 <div class="text-center position-relative">
@@ -74,11 +78,13 @@
 
                 <!-- Bag -->
                 <div class="text-center position-relative">
-                  <div class="bag_icon">
-                    <i class="fas fa-shopping-bag fa-lg"></i>
-                    <div class="count_bag">1</div>
-                  </div>
-                  <p class="mb-0">Bag</p>
+                  <a href="cart.html">
+                    <div class="bag_icon">
+                      <i class="fas fa-shopping-bag fa-lg"></i>
+                      <div class="count_bag">1</div>
+                      <p class="mb-0">Bag</p>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -97,6 +103,8 @@
             <a href="#" class="nav-link" data-dropdown="jewellery">Jewellery & Accessories</a>
             <a href="#" class="nav-link" data-dropdown="bags">Bags & Footwear</a>
             <a href="#" class="nav-link" data-dropdown="electronics">Electronics</a>
+            <a href="#" class="nav-link" data-dropdown="electronics">Sports & Fitness</a>
+            <a href="#" class="nav-link" data-dropdown="electronics">Car & Motorbike</a>
           </nav>
 
           <!-- Dropdown Example -->
@@ -161,6 +169,88 @@
                 <a href="#" class="dropdown-item">Islamic Fashion</a>
                 <a href="#" class="dropdown-item">Petticoats</a>
               </div>
+              <div class="dropdown-column">
+                <div class="column-title">Suits & Dress Material</div>
+                <a href="#" class="dropdown-item">All Suits & Dress Material</a>
+                <a href="#" class="dropdown-item">Cotton Suits</a>
+                <a href="#" class="dropdown-item">Embroidered Suits</a>
+                <a href="#" class="dropdown-item">Crepe Suits</a>
+                <a href="#" class="dropdown-item">Silk Suits</a>
+                <a href="#" class="dropdown-item">Patiala Suits</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown-container" id="women-ethnic-dropdown">
+            <div class="dropdown-content">
+              <div class="dropdown-column">
+                <div class="column-title">Sarees</div>
+                <a href="#" class="dropdown-item">All Sarees</a>
+                <a href="#" class="dropdown-item">Silk Sarees</a>
+                <a href="#" class="dropdown-item">Banarasi Silk Sarees</a>
+                <a href="#" class="dropdown-item">Cotton Sarees</a>
+                <a href="#" class="dropdown-item">Georgette Sarees</a>
+                <a href="#" class="dropdown-item">Chiffon Sarees</a>
+                <a href="#" class="dropdown-item">Heavy Work Sarees</a>
+                <a href="#" class="dropdown-item">Net Sarees</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Kurtis</div>
+                <a href="#" class="dropdown-item">All Kurtis</a>
+                <a href="#" class="dropdown-item">Anarkali Kurtis</a>
+                <a href="#" class="dropdown-item">Rayon Kurtis</a>
+                <a href="#" class="dropdown-item">Cotton Kurtis</a>
+                <a href="#" class="dropdown-item">Chikankari Kurtis</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Kurta Sets</div>
+                <a href="#" class="dropdown-item">All Kurta Sets</a>
+                <a href="#" class="dropdown-item">Kurta Palazzo Sets</a>
+                <a href="#" class="dropdown-item">Rayon Kurta Sets</a>
+                <a href="#" class="dropdown-item">Kurta Pant Sets</a>
+                <a href="#" class="dropdown-item">Cotton Kurta Sets</a>
+                <a href="#" class="dropdown-item">Sharara Sets</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Dupatta Sets</div>
+                <a href="#" class="dropdown-item">Cotton Sets</a>
+                <a href="#" class="dropdown-item">Rayon Sets</a>
+                <a href="#" class="dropdown-item">Printed Sets</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Suits & Dress Material</div>
+                <a href="#" class="dropdown-item">All Suits & Dress Material</a>
+                <a href="#" class="dropdown-item">Cotton Suits</a>
+                <a href="#" class="dropdown-item">Embroidered Suits</a>
+                <a href="#" class="dropdown-item">Crepe Suits</a>
+                <a href="#" class="dropdown-item">Silk Suits</a>
+                <a href="#" class="dropdown-item">Patiala Suits</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Lehengas</div>
+                <a href="#" class="dropdown-item">Lehenga Cholis</a>
+                <a href="#" class="dropdown-item">Net Lehenga</a>
+                <a href="#" class="dropdown-item">Bridal Lehenga</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Other Ethnic</div>
+                <a href="#" class="dropdown-item">Blouses</a>
+                <a href="#" class="dropdown-item">Dupattas</a>
+                <a href="#" class="dropdown-item">Lehanga</a>
+                <a href="#" class="dropdown-item">Gown</a>
+                <a href="#" class="dropdown-item">Skirts & Bottomwear</a>
+                <a href="#" class="dropdown-item">Islamic Fashion</a>
+                <a href="#" class="dropdown-item">Petticoats</a>
+              </div>
+              <div class="dropdown-column">
+                <div class="column-title">Suits & Dress Material</div>
+                <a href="#" class="dropdown-item">All Suits & Dress Material</a>
+                <a href="#" class="dropdown-item">Cotton Suits</a>
+                <a href="#" class="dropdown-item">Embroidered Suits</a>
+                <a href="#" class="dropdown-item">Crepe Suits</a>
+                <a href="#" class="dropdown-item">Silk Suits</a>
+                <a href="#" class="dropdown-item">Patiala Suits</a>
+              </div>
             </div>
           </div>
         </div>
@@ -169,14 +259,17 @@
     <!--======End Web Header ====== -->
 
     <!--======Start Mobile Header ====== -->
-    <div class="container-fluid d-lg-none d-block py-2 shadow-lg sticky-top bg-white">
+    <div class="mobile-header container-fluid d-lg-none py-2 shadow-lg fixed-top bg-white">
       <div class="row align-items-center px-2">
+        <!-- Logo -->
         <div class="col-6 text-start">
-          <img class="responsive_logo" src="assets/irizonfinal[1].png" alt="mobile_logo" style="height: 60px;" />
+          <img class="responsive_logo" src="assets/irizonfinal[1].png" alt="mobile_logo" style="height: 55px;" />
         </div>
+
+        <!-- Search Icon -->
         <div class="col-6 text-end">
-          <svg id="toggleSearch" class="mobile_search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
-            height="24" fill="none" style="cursor: pointer;">
+          <svg id="toggleSearch" class="mobile_search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28"
+            height="28" fill="none" style="cursor: pointer;">
             <path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round" />
             <path d="M20 11C20 6.03 15.97 2 11 2S2 6.03 2 11s4.03 9 9 9 9-4.03 9-9Z" stroke="currentColor"
@@ -185,11 +278,11 @@
         </div>
       </div>
 
-      <!-- Toggle-able Search Bar -->
+      <!-- Search Bar Toggle -->
       <div id="mobileSearchBar" class="row px-3 mt-2 d-none">
         <div class="col-12">
           <div class="position-relative">
-            <input class="form-control py-2 ps-3 pe-5 rounded-pill border" type="text" placeholder="Search"
+            <input class="form-control py-2 ps-3 pe-5 rounded-pill border" type="text" placeholder="Search products..."
               id="mobile-search" />
             <span class="position-absolute top-50 translate-middle-y" style="right: 15px;">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
@@ -200,7 +293,16 @@
           </div>
         </div>
       </div>
+
+      <!-- Suggestion Box -->
+      <div class="product-suggestion-box d-none mt-2" id="mobileSearchSuggestions">
+        <p class="px-3">Showing results for: '<span id="mobileSearchKeyword" class="text-success"></span>'</p>
+        <table class="table table-sm table-borderless" id="mobileSuggestionTable">
+          <!-- JS will insert rows -->
+        </table>
+      </div>
     </div>
+
     <!--======End Mobile Header ====== -->
 
     <!-- ======Start Bottom Bar====== -->
@@ -226,7 +328,7 @@
             </a>
           </li>
           <li class="nav__item">
-            <a href="#Profile" class="nav__item-link">
+            <a href="login.html" class="nav__item-link">
               <div class="nav__item-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
                   fill="none">
@@ -257,7 +359,7 @@
             </a>
           </li>
           <li class="nav__item">
-            <a href="#Help" class="nav__item-link">
+            <a href="cart.html" class="nav__item-link">
               <div class="nav__item-icon">
                 <div class="bag_icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
@@ -461,87 +563,63 @@
 
 
   <!-- ===Footer-Section-Start=== -->
-  <footer class="footer-section">
+   <footer class="footer-section">
     <div class="container">
       <div class="row">
+        <!-- Column 1 -->
         <div class="col-lg-4 col-md-7">
           <div class="f-box">
             <div class="f-logo">
               <img src="assets/irizonfinal[1].png" alt="Iriszon" />
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, perspiciatis dolore
-              numquam sed sit
-              doloremque veritatis ratione ex minus illum. </p>
+              Lorem ipsum dolor sit. Nostrum, perspiciatis dolore numquam sed sit
+              doloremque veritatis ratione ex minus illum.
+            </p>
             <ul class="social-link">
-              <li>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-              </li>
+              <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
             </ul>
           </div>
         </div>
+
+        <!-- Column 2 -->
         <div class="col-lg-3 col-md-5">
           <div class="f-box">
             <h4>Quick Links</h4>
             <ul>
-              <li>
-                <a href="index.html"><span>Home</span></a>
-              </li>
-              <li>
-                <a href="#about"><span>About</span></a>
-              </li>
-
-              </li>
-              <li>
-                <a href="pliocy.html"><span>Privacy Policy</span></a>
-              </li>
-              <li>
-                <a href="terms.html"><span>Terms & Conditions</span></a>
-              </li>
+              <li><a href="index.html"><span>Home</span></a></li>
+              <li><a href="#about"><span>About</span></a></li>
+              <li><a href="pliocy.html"><span>Privacy Policy</span></a></li>
+              <li> <a href="become.html"> <button class="seller_button">Become a Supplier</button></a></li>
             </ul>
           </div>
         </div>
+
+        <!-- Column 3 -->
         <div class="col-lg-5">
           <div class="f-box">
             <h4>Contact Info</h4>
             <ul>
-              <li>
-                <i class="fa-solid fa-location-dot"></i>
-                Lorem ipsum dolor sit amet consectetur
-              </li>
-
-              <li>
-                <i class="fa-solid fa-phone"></i><a href="tel:+91 123456789">+91 1234567689</a>
-              </li>
-
-              <li>
-                <i class="fa-solid fa-envelope"></i><a href="mailto:@gmail.com">@gmail.com</a>
-              </li>
+              <li><i class="fa-solid fa-location-dot"></i> Lorem ipsum dolor sit amet</li>
+              <li><i class="fa-solid fa-phone"></i><a href="tel:+91 123456789">+91 1234567689</a></li>
+              <li><i class="fa-solid fa-envelope"></i><a href="mailto:@gmail.com">@gmail.com</a></li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="copy-right">
-          <p>
-            © Copyright 2025 | Powered by IRISZON. and
-            Designed By
-            <a href="#">#</a>
-          </p>
-        </div>
-      </div>
+    </div>
+
+    <!-- CopyRight Section Moved Outside -->
+    <div class="copy-right">
+      <p>
+        © Copyright 2025 | Powered by IRISZON. and
+        Designed By <a href="#">#</a>
+      </p>
     </div>
   </footer>
-  <div class="d-block d-lg-none"></div>
   <!-- ===Footer-Section-End=== -->
 
 
