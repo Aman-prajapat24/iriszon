@@ -2459,6 +2459,12 @@ header .dropdown-item:hover {
     font-size: 14px;
     padding: 10px;
   }
+
+  /* Equal space left & right on mobile */
+  .products_details .product-box {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 /* Desktop Enhancements */
